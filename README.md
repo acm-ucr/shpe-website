@@ -1,4 +1,4 @@
-# ACM UCR Website Template
+# Society of Hispanic Professional Engineers Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -13,7 +13,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[SHPE Website Figma Design File](https://www.figma.com/design/yxG16hQJvG3ICoFKxpJgys/Winter--26-SHPE?node-id=0-1&p=f)
 
 ## Node.js
 
