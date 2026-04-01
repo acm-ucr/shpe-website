@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-shpe-white-100: #ffffff;
+  --color-shpe-orange-500: #fd652f;
+  --color-shpe-blue-200: #001f5b;
+  --color-shpe-blue-100: #001f5b;
+  --color-shpe-blue-050: #72a9be;
+  --color-shpe-red-100: #e22726;
+}
