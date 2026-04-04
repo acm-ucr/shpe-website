@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Beachwood";
+  src: url("/fonts/Beachwood-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Univers";
+  src: url("/fonts/Univers-LT-Std-55-Roman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/Univers-LT-Std-57-Condensed.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/fonts/Univers-LT-Std-47-Light-Condensed.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-shpe-white-100: #ffffff;
   --color-shpe-orange-500: #fd652f;
@@ -7,4 +36,8 @@
   --color-shpe-blue-100: #003da5;
   --color-shpe-blue-050: #72a9be;
   --color-shpe-red-100: #e22726;
+
+  --font-shpe-univers-condensed: "Univers Condensed", monospace, sans-serif;
+  --font-shpe-univers: "Univers", sans-serif;
+  --font-shpe-beachwood: "Beachwood", sans-serif;
 }
