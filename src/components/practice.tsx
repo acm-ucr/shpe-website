@@ -7,7 +7,7 @@ const Example = (props: { text1: string; text2: string; text3: string }) => {
         <div className="w-full bg-green-200 p-5 text-left">{props.text2}</div>
       </div>
 
-      <div className="w-1/2 bg-yellow-200 p-5">{props.text3}</div>
+      <div className="bg-shpe-blue-050 w-1/2 p-5">{props.text3}</div>
     </div>
   );
 };
