@@ -19,7 +19,7 @@ const NotFound = () => {
         href="/"
         className="font-shpe-univers mt-5 flex h-12 w-30 items-center justify-center rounded-3xl bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-xl font-light text-white"
       >
-        HOME
+        HOMES
       </Link>
     </div>
   );
