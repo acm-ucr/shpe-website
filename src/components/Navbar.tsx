@@ -9,7 +9,7 @@ import { navbarLinks } from "@/components/data/navbarLinks";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState("");
 
-  const toggleMenu = (name) => {
+  const toggleMenu = (name: string) => {
     setOpenMenu(openMenu === name ? "" : name);
   };
 
