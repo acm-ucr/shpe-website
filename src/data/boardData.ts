@@ -79,5 +79,5 @@ export const boardData: BoardMember[] = [
     image: "/imagePlaceholder.svg",
     position: "Social & Mentorship Chair",
     linkedin: "https://linkedin.com/in/username",
-  }
+  },
 ];
