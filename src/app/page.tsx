@@ -2,9 +2,11 @@ import Example from "@/components/practice";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen items-center justify-center">
-      Practice
-      <Example text1="Prop1" text2="Prop2" text3="Props"></Example>
+    <div className="flex h-screen w-screen flex-col items-center justify-center gap-6 bg-shpe-blue-050">
+      {/*Page has a light blue background*/}
+      
+      <Example text1="Prop 1" text2="Prop 2" text3="Prop 2" text4="Props"></Example>
+      {/*The component now gets all four props*/}
     </div>
   );
 };
