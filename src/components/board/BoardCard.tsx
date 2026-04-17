@@ -15,8 +15,8 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
 
-      <div className="text-2xl font-bold">{name}</div>
-      <div className="text-lg">{position}</div>
+      <div className="font-shpe-univers-condensed text-2xl">{name}</div>
+      <div className="font-shpe-univers-condensed text-lg">{position}</div>
 
       <a href={linkedin} target="_blank" rel="noreferrer">
         <Image src={LinkedInIcon} alt="LinkedIn icon" className="h-12 w-12" />
