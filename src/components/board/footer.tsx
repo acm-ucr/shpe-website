@@ -12,7 +12,7 @@ const iconSize = "h-[50px] w-[50px]";
 
 const Footer = () => {
   return (
-    <div className="from-shpe-blue-200 to-shpe-blue-050 fixed bottom-0 left-0 flex w-full items-center justify-between bg-gradient-to-r px-[40px] py-[20px]">
+    <div className="from-shpe-blue-200 to-shpe-blue-150 fixed bottom-0 left-0 flex w-full items-center justify-between bg-gradient-to-r px-[40px] py-[20px]">
       <Image
         src={shpeFooterLogo}
         alt="FooterLogo"
