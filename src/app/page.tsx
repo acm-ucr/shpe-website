@@ -8,7 +8,7 @@ const Home = () => {
       Practice
       <Example text1="Prop1" text2="Prop2" text3="Props"></Example>
       <div className="flex w-full justify-center px-6">
-        <div className="grid grid-cols-3 gap-x-40 gap-y-10">
+        <div className="flex max-w-[1280px] flex-wrap justify-center gap-x-40 gap-y-10">
           {boardData.map((member, index) => (
             <BoardCard
               key={index}
