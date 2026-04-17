@@ -80,4 +80,16 @@ export const boardData: BoardMember[] = [
     position: "Social & Mentorship Chair",
     linkedin: "https://linkedin.com/in/username",
   },
+  {
+    name: "Janelle Avila",
+    image: "/imagePlaceholder.svg",
+    position: "Fundraising Chair",
+    linkedin: "https://linkedin.com/in/username",
+  },
+  {
+    name: "Diego Alvarez",
+    image: "/imagePlaceholder.svg",
+    position: "Recruitment Chairr",
+    linkedin: "https://linkedin.com/in/username",
+  },
 ];
