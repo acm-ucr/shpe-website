@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "Beachwood";
   src: url("/fonts/Beachwood-Variable.woff2") format("woff2");
@@ -8,7 +7,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Univers";
   src: url("/fonts/Univers-LT-Std-55-Roman.ttf") format("truetype");
@@ -16,7 +14,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Univers Condensed";
   src: url("/fonts/Univers-LT-Std-57-Condensed.ttf") format("truetype");
@@ -24,7 +21,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Univers Condensed";
   src: url("/fonts/Univers-LT-Std-47-Light-Condensed.ttf") format("truetype");
@@ -33,33 +29,25 @@
   font-display: swap;
 }
 
-
-
 @theme {
-  /* Colors */
   --color-shpe-white-100: #ffffff;
-
   --color-shpe-orange-500: #fd652f;
-
-  --color-shpe-blue-050: #72a9be;
-  --color-shpe-blue-100: #003da5;
   --color-shpe-blue-200: #001f5b;
-  --color-shpe-blue-800: #001f5b;
-  --color-shpe-blue-900: #000000;
-
+  --color-shpe-blue-100: #003da5;
+  --color-shpe-blue-050: #72a9be;
   --color-shpe-red-100: #e22726;
   --color-shpe-red-600: #b71c1c;
-
-  --color-shpe-cyan-100: #00e7fd;
-  --color-shpe-cyan-200: #00c8d9;
-  --color-shpe-cyan-300: #00b8c6;
-  --color-shpe-cyan-400: #00a9b5;
+  --color-shpe-blue-800: #001f5b;
+  --color-shpe-blue-900: #000000;
   --color-shpe-cyan-600: #008891;
-
+  --color-shpe-cyan-400: #00a9b5;
+  --color-shpe-cyan-300: #00b8c6;
+  --color-shpe-cyan-200: #00c8d9;
+  --color-shpe-cyan-100: #00e7fd;
   --color-shpe-sky-100: #72a9be;
   --color-shpe-sky-200: #00c8d9;
+  --color-shpe-blue-200: #001f5b;
 
-  
   --font-shpe-univers-condensed: "Univers Condensed", monospace, sans-serif;
   --font-shpe-univers: "Univers", sans-serif;
   --font-shpe-beachwood: "Beachwood", sans-serif;
