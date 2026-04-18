@@ -9,10 +9,10 @@ const NotFound = () => {
         <Image
           src={NotFoundImage}
           alt="404 Image"
-          className="z-10 h-auto w-1/2 pb-10"
+          className="z-10 mb-5 h-auto w-4/5 md:mb-10 md:w-1/2"
         />
       }
-      <p className="font-shpe-beachwood mt-5 mb-5 w-1/2 text-center text-4xl font-semibold text-blue-800">
+      <p className="font-shpe-beachwood w-4/5 text-center text-lg font-semibold text-blue-800 md:mt-5 md:mb-5 md:w-1/2 md:text-4xl">
         UH OH IT LOOKS LIKE THE PAGE YOU ARE LOOKING FOR DOESN'T EXIST
       </p>
       <Link
