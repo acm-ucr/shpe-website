@@ -1,10 +1,10 @@
-import discordIcon from "@/public/discord.webp";
-import emailIcon from "@/public/email.webp";
-import facebookIcon from "@/public/facebook.webp";
-import instagramIcon from "@/public/instagram.webp";
-import linkedinIcon from "@/public/linkedIn.webp";
-import newsIcon from "@/public/news.webp";
-import shpeFooterLogo from "@/public/shpeFooterLogo.webp";
+import discordIcon from "@/public/footer/discord.webp";
+import emailIcon from "@/public/footer/email.webp";
+import facebookIcon from "@/public/footer/facebook.webp";
+import instagramIcon from "@/public/footer/instagram.webp";
+import linkedinIcon from "@/public/footer/linkedIn.webp";
+import newsIcon from "@/public/footer/news.webp";
+import shpeFooterLogo from "@/public/footer/shpeFooterLogo.svg";
 
 import Image from "next/image";
 
