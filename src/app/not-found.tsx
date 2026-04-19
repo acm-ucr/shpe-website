@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NotFoundImage from "@/public/404Image.webp";
+import NotFoundImage from "@/public/404Image.svg";
 import Link from "next/link";
 
 const NotFound = () => {
