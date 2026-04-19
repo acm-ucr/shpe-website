@@ -4,7 +4,7 @@ const OurMission = (props: { title: string; text: string }) => {
       <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-2 scale-y-140 text-3xl font-semibold tracking-tight uppercase">
         {props.title}
       </h2>
-      <p className="font-shpe-univers-condensed max-w-4xl text-sm leading-4 font-semibold text-[#000000]">
+      <p className="font-shpe-univers-condensed max-w-4xl text-sm leading-4 font-semibold">
         {props.text}
       </p>
     </div>
