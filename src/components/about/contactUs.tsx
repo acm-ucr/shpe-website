@@ -10,10 +10,10 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 // made these into variables for easier changes if needed/wanted
-const iconSize = "h-[88px] w-[88px]";
+const iconSize = "md:h-[88px] md:w-[88px] h-[51px] w-[51px]";
 const circleStyle =
-  "flex flex-col items-center justify-center bg-shpe-orange-500 rounded-full h-[140px] w-[140px]";
-const lineStyle = "h-[3px] w-[82px] bg-shpe-orange-500 mx-[20px]";
+  "flex flex-col items-center justify-center bg-shpe-orange-500 rounded-full w-[82px] h-[82px] md:h-[140px] md:w-[140px]";
+const lineStyle = "h-[3px] w-[45px] bg-shpe-orange-500 mx-[20px] md:w-[82px]";
 const subHeaderStyle =
   "font-shpe-univers text-shpe-blue-200 text-center text-3xl";
 const margins = "flex flex-col items-center gap-[20px] mt-[40px]";
@@ -30,8 +30,8 @@ const ContactCircle = ({
   icon,
   alt,
   label,
-  textSize = "text-[17px]",
-  tweak = "-mt-[5px] pb-[5px]",
+  textSize = "md:text-[17px] text-[10px]",
+  tweak = "-md:mt-[5px] pb-[5px]",
 }: ContactCircleProps) => (
   <div className={circleStyle}>
     <Image src={icon} alt={alt} className={`${iconSize}`} />
@@ -49,15 +49,15 @@ const contactQuestions = [
     icon: instagramIcon,
     alt: "Instagram",
     label: "@shpeucr",
-    textSize: "text-[15px]",
-    tweak: "-mt-[5px] pb-[10px]",
+    textSize: "md:text-[15px] text-[8px]",
+    tweak: "md:-mt-[5px] pb-[10px] -mt-[2px]",
   },
   {
     icon: emailIcon,
     alt: "Email",
     label: "shpeucr@gmail.com",
-    textSize: "text-[12px]",
-    tweak: "-mt-[15px] pb-[12px]",
+    textSize: "md:text-[12px] text-[7px]",
+    tweak: "md:-mt-[15px] pb-[12px] -mt-[7px]",
   },
 ];
 
@@ -70,17 +70,17 @@ const socialLinks = [
 
 const ContactUs = () => {
   return (
-    <div className="bg-shpe-white-100 relative overflow-hidden pt-[40px] pb-[240px]">
+    <div className="bg-shpe-white-100 relative overflow-hidden pt-[40px] md:pb-[240px]">
       {/* Gears */}
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] left-[-100px] w-[300px] scale-x-[-1] opacity-40"
+        className="absolute top-[50px] left-[-100px] w-[300px] scale-x-[-1] opacity-40 hidden lg:block"
       />
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] right-[-100px] w-[300px] opacity-40"
+        className="absolute top-[50px] right-[-100px] w-[300px] opacity-40 hidden lg:block"
       />
       {/* Title */}
       <div className="font-shpe-beachwood text-center text-6xl font-semibold">
@@ -91,7 +91,7 @@ const ContactUs = () => {
         <div className={subHeaderStyle}>Have Questions?</div>
         <div className="mt-[25px] flex items-center justify-center">
           {contactQuestions.map((item, i) => (
-            <div key={i} className="flex items-center">
+            <div key={i} className="flex items-center justify-center">
               <ContactCircle {...item} />
               {i !== contactQuestions.length - 1 && <Divider />}
             </div>
@@ -100,13 +100,22 @@ const ContactUs = () => {
       </div>
       <div className={margins}>
         <div className={subHeaderStyle}>Connect With Us!</div>
-        <div className="mt-[25px] flex items-center justify-center">
-          {socialLinks.map((item, i) => (
-            <div key={i} className="flex items-center">
-              <ContactCircle {...item} />
-              {i !== socialLinks.length - 1 && <Divider />}
+        <div className="flex flex-col md:flex-row items-center mt-[25px] gap-[20px]">
+            {/* row 1 */}
+            <div className="flex items-center justify-center pb-[25px] md:pb-[0px]">
+                <ContactCircle {...socialLinks[0]} />
+                <Divider />
+                <ContactCircle {...socialLinks[1]} />
             </div>
-          ))}
+            <div className="items-center justify-ceter -mx-[20px] hidden md:block">
+                <Divider/>
+            </div>
+            {/* row 2 */}
+            <div className="flex items-center justify-center">
+                <ContactCircle {...socialLinks[2]} />
+                <Divider />
+                <ContactCircle {...socialLinks[3]} />
+            </div>
         </div>
       </div>
     </div>
