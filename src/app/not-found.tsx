@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div>
       <TitleBanner
-        title=""
+        title="Title"
         description=""
         icon={Questionmark}
         decoration={Gears}
