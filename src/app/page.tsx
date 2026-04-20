@@ -3,10 +3,10 @@ import ContactUs from "@/components/about/contactUs";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen items-center justify-center">
+    <div className="bg-shpe-blue-050 h-screen w-screen items-center justify-center">
       Practice
-      <Footer></Footer>
       <ContactUs></ContactUs>
+      <Footer></Footer>
     </div>
   );
 };
