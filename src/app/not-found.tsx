@@ -1,10 +1,20 @@
 import Image from "next/image";
 import NotFoundImage from "@/public/404Image.svg";
 import Link from "next/link";
+import Questionmark from "@/public/banners/icons/question mark.webp"
+import Gears from "@/public/banners/404.webp"
+import TitleBanner from "@/components/Title";
 
 const NotFound = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div>
+      <TitleBanner
+        title=""
+        description=""
+        icon={Questionmark}
+        decoration={Gears}
+      />
+      <div className="flex h-screen flex-col items-center justify-center">
       {
         <Image
           src={NotFoundImage}
@@ -21,6 +31,7 @@ const NotFound = () => {
       >
         HOME
       </Link>
+    </div>
     </div>
   );
 };
