@@ -1,4 +1,5 @@
 import OurMission from "@/components/landing/ourMission";
+import Footer from "@/components/board/footer";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
         title="OUR MISSION"
         text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
       />
+      <Footer></Footer>
     </div>
   );
 };
