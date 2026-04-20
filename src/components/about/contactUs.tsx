@@ -75,12 +75,12 @@ const ContactUs = () => {
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] left-[-100px] w-[300px] scale-x-[-1] opacity-40 hidden lg:block"
+        className="absolute top-[50px] left-[-100px] hidden w-[300px] scale-x-[-1] opacity-40 lg:block"
       />
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] right-[-100px] w-[300px] opacity-40 hidden lg:block"
+        className="absolute top-[50px] right-[-100px] hidden w-[300px] opacity-40 lg:block"
       />
       {/* Title */}
       <div className="font-shpe-beachwood text-center text-6xl font-semibold">
@@ -100,22 +100,22 @@ const ContactUs = () => {
       </div>
       <div className={margins}>
         <div className={subHeaderStyle}>Connect With Us!</div>
-        <div className="flex flex-col md:flex-row items-center mt-[25px] gap-[20px]">
-            {/* row 1 */}
-            <div className="flex items-center justify-center pb-[25px] md:pb-[0px]">
-                <ContactCircle {...socialLinks[0]} />
-                <Divider />
-                <ContactCircle {...socialLinks[1]} />
-            </div>
-            <div className="items-center justify-ceter -mx-[20px] hidden md:block">
-                <Divider/>
-            </div>
-            {/* row 2 */}
-            <div className="flex items-center justify-center">
-                <ContactCircle {...socialLinks[2]} />
-                <Divider />
-                <ContactCircle {...socialLinks[3]} />
-            </div>
+        <div className="mt-[25px] flex flex-col items-center gap-[20px] md:flex-row">
+          {/* row 1 */}
+          <div className="flex items-center justify-center pb-[25px] md:pb-[0px]">
+            <ContactCircle {...socialLinks[0]} />
+            <Divider />
+            <ContactCircle {...socialLinks[1]} />
+          </div>
+          <div className="justify-ceter -mx-[20px] hidden items-center md:block">
+            <Divider />
+          </div>
+          {/* row 2 */}
+          <div className="flex items-center justify-center">
+            <ContactCircle {...socialLinks[2]} />
+            <Divider />
+            <ContactCircle {...socialLinks[3]} />
+          </div>
         </div>
       </div>
     </div>
