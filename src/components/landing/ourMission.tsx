@@ -1,4 +1,9 @@
-const OurMission = (props: { title: string; text: string }) => {
+interface OurMissionProps {
+  title: string;
+  text: string;
+}
+
+const OurMission = (props: OurMissionProps) => {
   return (
     <div className="bg-shpe-orange-500/50 flex w-full flex-col items-center px-20 py-7 text-center">
       <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-2 scale-y-140 text-3xl font-semibold tracking-tight uppercase">
