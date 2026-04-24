@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import LinkedInIcon from "@/public/linkedIn.webp";
 
 interface BoardCardProps {
   name: string;
@@ -19,7 +18,12 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       <div className="font-shpe-univers-condensed text-lg">{position}</div>
 
       <a href={linkedin} target="_blank" rel="noreferrer">
-        <Image src={LinkedInIcon} alt="LinkedIn icon" className="h-12 w-12" />
+        <Image
+          src="/linkedIn.webp"
+          alt="LinkedIn"
+          width={48}
+          height={48}
+        />
       </a>
     </div>
   );
