@@ -1,10 +1,14 @@
-import Example from "@/components/practice";
+import OurMission from "@/components/landing/ourMission";
+import Footer from "@/components/board/footer";
 
 const Home = () => {
   return (
     <div className="h-screen w-screen items-center justify-center">
-      Practice
-      <Example text1="Prop1" text2="Prop2" text3="Props"></Example>
+      <OurMission
+        title="OUR MISSION"
+        text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
+      />
+      <Footer></Footer>
     </div>
   );
 };
