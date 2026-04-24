@@ -18,7 +18,7 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       <div className="font-shpe-univers-condensed text-lg">{position}</div>
 
       <a href={linkedin} target="_blank" rel="noreferrer">
-        <Image src="/linkedIn.webp" alt="LinkedIn" width={48} height={48} />
+        <Image src="/LinkedIn.svg" alt="LinkedIn" width={48} height={48} />
       </a>
     </div>
   );
