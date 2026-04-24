@@ -1,16 +1,16 @@
-import OurMission from "@/components/landing/ourMission";
-import Footer from "@/components/board/footer";
+import WhoWeAre from "@/components/landing/CreateWhoWeAre";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen items-center justify-center">
-      <OurMission
-        title="OUR MISSION"
-        text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
+    <div className="h-screen w-screen items-right justify-center">
+      <WhoWeAre
+        title = "Who We Are"
+        text = {"SHPE @ UCR is an interdisciplinary engineering organization. We pride ourselves in not only being able to improve ourselves in a professional, academic, and innovatice way, but in our ability to give back to the community through outreach. Overall, we have proved that we can prepare members for the real world, outside of their undergraduate career, whether it be in graduate schook, the industry, or anything else."}
       />
-      <Footer></Footer>
+
     </div>
   );
 };
-
+  
 export default Home;
+
