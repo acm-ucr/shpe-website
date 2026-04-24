@@ -10,8 +10,8 @@ interface BoardCardProps {
 
 const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
   return (
-    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-80 flex-col items-center rounded-4xl p-7 pb-3 text-center">
-      <div className="bg-shpe-white-100 relative mb-3 aspect-[5/6] w-full overflow-hidden rounded-3xl">
+    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center">
+      <div className="bg-shpe-white-100 relative mb-2 aspect-[5/6] w-full overflow-hidden rounded-3xl">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
 
