@@ -8,37 +8,35 @@ interface titleData {
   decoration: StaticImageData;
 }
 
-const TitleBanner = ({
-    title,
-    description,
-    icon,
-    decoration,
-}: titleData) =>{
-    return(
-        <div className="relative flex flex-col items-center justify-center bg-gradient-to-b from-[#00355A] to-[#0070C0] -mt-30 -z-10">
-            <div className="relative">
-                <Image
-                    src={decoration}
-                    alt="Decor"
-                />
-                <div className="flex flex-row items-start absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    {icon && <Image
-                    className=""
-                    src={icon}
-                    alt="Icon"
-                    />}
-                    <div className="mt-7.5 ml-5 flex flex-col items-center justify-center">
-                        <p className="text-white font-shpe-beachwood font-semibold text-5xl">
-                            {title}
-                        </p>
-                        <p className="text-white font-shpe-univers text-xl font-light">
-                            {description}
-                        </p>
-                    </div>
-                </div>
-            </div>
+const TitleBanner = ({ title, description, icon, decoration }: titleData) => {
+  return (
+    <div className="relative -z-10 -mt-35 flex flex-col items-center justify-center bg-gradient-to-b from-[#00355A] to-[#0070C0]">
+      <div className="relative">
+        <Image
+          className="h-auto w-full object-contain"
+          src={decoration}
+          alt="Decor"
+        />
+        <div className="absolute top-3/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-row items-start">
+          {icon && (
+            <Image
+              className="h-12 w-12 md:h-auto md:w-auto"
+              src={icon}
+              alt="Icon"
+            />
+          )}
+          <div className="mt-7.5 ml-5 flex flex-col items-center justify-center">
+            <p className="font-shpe-beachwood text-5xl font-semibold text-white">
+              {title}
+            </p>
+            <p className="font-shpe-univers text-xl font-light text-white">
+              {description}
+            </p>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default TitleBanner;

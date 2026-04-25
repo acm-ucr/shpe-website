@@ -1,5 +1,5 @@
-import GradCap from "@/public/banners/icons/Graduation Cap.webp"
-import Decor from "@/public/banners/SolarBoat-Alumni.webp"
+import GradCap from "@/public/banners/icons/Graduation Cap.webp";
+import Decor from "@/public/banners/SolarBoat-Alumni.webp";
 import TitleBanner from "@/components/Title";
 
 const Alumni = () => {

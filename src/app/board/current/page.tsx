@@ -1,4 +1,4 @@
-import Decor from "@/public/banners/Gallery-MeetTheTeam.webp"
+import Decor from "@/public/banners/Gallery-MeetTheTeam.webp";
 import TitleBanner from "@/components/Title";
 
 const Board = () => {

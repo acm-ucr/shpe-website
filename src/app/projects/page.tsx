@@ -1,5 +1,5 @@
-import Boat from "@/public/banners/icons/Sail Boat.webp"
-import Decor from "@/public/banners/SolarBoat-Alumni.webp"
+import Boat from "@/public/banners/icons/Sail Boat.webp";
+import Decor from "@/public/banners/SolarBoat-Alumni.webp";
 import TitleBanner from "@/components/Title";
 
 const Projects = () => {
