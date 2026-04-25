@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 interface titleData {
   title: string;
   description: string;
-  icon: StaticImageData;
+  icon?: StaticImageData;
   decoration: StaticImageData;
 }
 

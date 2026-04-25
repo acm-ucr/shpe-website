@@ -7,7 +7,6 @@ const Board = () => {
       <TitleBanner
         title="MEET THE TEAM"
         description="Click each board member to learn more about them!"
-        icon={null}
         decoration={Decor}
       />
       <p>Current Board</p>
