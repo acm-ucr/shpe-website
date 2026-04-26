@@ -1,4 +1,3 @@
-//import WhoWeAre from "@/components/landing/CreateWhoWeAre";
 import WhoWeAre from "@/components/landing/CreateWhoWeAre";
 
 const Home = () => {
