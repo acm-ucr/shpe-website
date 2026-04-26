@@ -1,9 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/components/board/footer";
 
 export const metadata = {
   title: "Society of Hispanic Professional Engineers",
@@ -17,10 +15,11 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="relative flex min-h-screen flex-col">
         <ReactQueryClientProvider>
           <Navbar />
-          {children}
+          <main className=" flex-grow">{children}</main>
+          <Footer />
         </ReactQueryClientProvider>
       </body>
     </html>
