@@ -1,5 +1,5 @@
 import discordIcon from "@/public/footer/discord.webp";
-import emailIcon from "@/public/footer/email.webp";
+import emailIcon from "@/public/email2.webp";
 import facebookIcon from "@/public/footer/facebook.webp";
 import instagramIcon from "@/public/footer/instagram.webp";
 import linkedinIcon from "@/public/footer/linkedIn.webp";
@@ -15,7 +15,7 @@ const circleStyle =
   "flex flex-col items-center justify-center bg-shpe-orange-500 rounded-full w-[82px] h-[82px] md:h-[140px] md:w-[140px]";
 const lineStyle = "h-[3px] w-[45px] bg-shpe-orange-500 mx-[20px] md:w-[82px]";
 const subHeaderStyle =
-  "font-shpe-univers text-shpe-blue-200 text-center text-3xl";
+  "font-shpe-univers-condensed text-shpe-blue-200 text-center text-3xl";
 const margins = "flex flex-col items-center gap-[20px] mt-[40px]";
 
 // reusable components
@@ -75,12 +75,12 @@ const ContactUs = () => {
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] left-[-100px] hidden w-[300px] scale-x-[-1] opacity-40 lg:block"
+        className="absolute top-[50px] left-[-100px] hidden w-[300px] scale-x-[-1] opacity-70 lg:block"
       />
       <Image
         src={gearImage}
         alt="gear"
-        className="absolute top-[50px] right-[-100px] hidden w-[300px] opacity-40 lg:block"
+        className="absolute top-[50px] right-[-100px] hidden w-[300px] opacity-70 lg:block"
       />
       {/* Title */}
       <div className="font-shpe-beachwood text-center text-6xl font-semibold">
