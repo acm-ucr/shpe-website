@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className="relative flex min-h-screen flex-col">
         <ReactQueryClientProvider>
           <Navbar />
-          <main className=" flex-grow">{children}</main>
+          <main className="flex-grow">{children}</main>
           <Footer />
         </ReactQueryClientProvider>
       </body>

@@ -7,7 +7,6 @@ const Home = () => {
         title="OUR MISSION"
         text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
       />
-      
     </div>
   );
 };
