@@ -3,7 +3,7 @@ const CreateWhoWeAre = (props: { title: string; text: string }) => {
     <div className="flex w-full items-start justify-between py-20">
       <div className="flex w-1/2 justify-start">
         <img
-          src="/WhoWeAre.jpg"
+          src="/WhoWeAre.webp"
           alt="Who We Are"
           className="h-auto max-w-full shadow-lg"
         />
