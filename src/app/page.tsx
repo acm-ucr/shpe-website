@@ -1,10 +1,15 @@
+import OurMission from "@/components/landing/ourMission";
 import LandingHeader from "@/components/landing/Header";
 
 const Home = () => {
   return (
-    <main className="bg-shpe-blue-100 min-h-screen">
+    <div className="w-screen items-center justify-center">
       <LandingHeader />
-    </main>
+      <OurMission
+        title="OUR MISSION"
+        text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
+      />
+    </div>
   );
 };
 
