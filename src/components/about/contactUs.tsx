@@ -1,14 +1,9 @@
 import instagramIcon from "@/public/footer/instagram.webp";
-// https://www.instagram.com/shpeucr/
 import emailIcon from "@/public/email2.webp";
-// mailto:shpeucr@gmail.com
 import discordIcon from "@/public/footer/discord.webp";
-// https://discord.com/invite/AbUrTPBja6
 import newsIcon from "@/public/footer/news.webp";
 import linkedinIcon from "@/public/footer/linkedIn.webp";
-// https://www.linkedin.com/company/shpe-at-ucr/
 import facebookIcon from "@/public/footer/facebook.webp";
-// https://www.facebook.com/groups/shpeucr/
 import gearImage from "@/public/gear.webp";
 
 import Image from "next/image";
@@ -41,10 +36,19 @@ const ContactCircle = ({
   textSize = "md:text-[17px] text-[10px]",
   tweak = "-md:mt-[5px] pb-[5px]",
 }: ContactCircleProps) => (
-  <Link href={href} target={(href.startsWith("http") || href.startsWith("mailto")) ? "_blank" : undefined}>
+  <Link
+    href={href}
+    target={
+      href.startsWith("http") || href.startsWith("mailto")
+        ? "_blank"
+        : undefined
+    }
+  >
     <div className={circleStyle}>
       <Image src={icon} alt={alt} className={`${iconSize}`} />
-      <div className={`text-center ${textSize} leading-none text-white ${tweak}`}>
+      <div
+        className={`text-center ${textSize} leading-none text-white ${tweak}`}
+      >
         {label}
       </div>
     </div>
@@ -74,10 +78,25 @@ const contactQuestions = [
 ];
 
 const socialLinks = [
-  { icon: discordIcon, alt: "Discord", label: "Discord", href: "https://discord.com/invite/AbUrTPBja6", },
+  {
+    icon: discordIcon,
+    alt: "Discord",
+    label: "Discord",
+    href: "https://discord.com/invite/AbUrTPBja6",
+  },
   { icon: newsIcon, alt: "Newsletter", label: "Newsletter", href: "/" },
-  { icon: linkedinIcon, alt: "LinkedIn", label: "LinkedIn", href: "https://www.linkedin.com/company/shpe-at-ucr/", },
-  { icon: facebookIcon, alt: "Facebook", label: "Facebook", href: "https://www.facebook.com/groups/shpeucr/", },
+  {
+    icon: linkedinIcon,
+    alt: "LinkedIn",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/shpe-at-ucr/",
+  },
+  {
+    icon: facebookIcon,
+    alt: "Facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/groups/shpeucr/",
+  },
 ];
 
 const ContactUs = () => {
