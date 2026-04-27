@@ -82,7 +82,7 @@ const socialLinks = [
 
 const ContactUs = () => {
   return (
-    <div className="bg-shpe-white-100 relative overflow-hidden pt-[40px] md:pb-[240px]">
+    <div className="bg-shpe-white-100 relative overflow-hidden py-[40px] md:py-[240px]">
       {/* Gears */}
       <Image
         src={gearImage}
