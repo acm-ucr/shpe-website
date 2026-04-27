@@ -59,7 +59,7 @@ const Navbar = () => {
             )}
 
             {sub && openMenu === name && (
-              <div className="divide-shpe-blue-100 bg-shpe-white-100 border-shpe-blue-200 absolute top-full flex h-max w-24 flex-col items-center divide-y rounded-2xl border pt-3 pb-3">
+              <div className="divide-shpe-blue-100 bg-shpe-white-100 border-shpe-blue-200 absolute top-full z-50 flex h-max w-24 flex-col items-center divide-y rounded-2xl border pt-3 pb-3">
                 {sub.map((item) => (
                   <Link
                     key={item.subname}
