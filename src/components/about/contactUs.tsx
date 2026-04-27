@@ -1,13 +1,19 @@
-import discordIcon from "@/public/footer/discord.webp";
-import emailIcon from "@/public/email2.webp";
-import facebookIcon from "@/public/footer/facebook.webp";
 import instagramIcon from "@/public/footer/instagram.webp";
-import linkedinIcon from "@/public/footer/linkedIn.webp";
+// https://www.instagram.com/shpeucr/
+import emailIcon from "@/public/email2.webp";
+// mailto:shpeucr@gmail.com
+import discordIcon from "@/public/footer/discord.webp";
+// https://discord.com/invite/AbUrTPBja6
 import newsIcon from "@/public/footer/news.webp";
+import linkedinIcon from "@/public/footer/linkedIn.webp";
+// https://www.linkedin.com/company/shpe-at-ucr/
+import facebookIcon from "@/public/footer/facebook.webp";
+// https://www.facebook.com/groups/shpeucr/
 import gearImage from "@/public/gear.webp";
 
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 
 // made these into variables for easier changes if needed/wanted
 const iconSize = "md:h-[88px] md:w-[88px] h-[51px] w-[51px]";
@@ -23,6 +29,7 @@ type ContactCircleProps = {
   icon: StaticImageData;
   alt: string;
   label: string;
+  href: string;
   textSize?: string;
   tweak?: string;
 };
@@ -30,15 +37,18 @@ const ContactCircle = ({
   icon,
   alt,
   label,
+  href,
   textSize = "md:text-[17px] text-[10px]",
   tweak = "-md:mt-[5px] pb-[5px]",
 }: ContactCircleProps) => (
-  <div className={circleStyle}>
-    <Image src={icon} alt={alt} className={`${iconSize}`} />
-    <div className={`text-center ${textSize} leading-none text-white ${tweak}`}>
-      {label}
+  <Link href={href} target={(href.startsWith("http") || href.startsWith("mailto")) ? "_blank" : undefined}>
+    <div className={circleStyle}>
+      <Image src={icon} alt={alt} className={`${iconSize}`} />
+      <div className={`text-center ${textSize} leading-none text-white ${tweak}`}>
+        {label}
+      </div>
     </div>
-  </div>
+  </Link>
 );
 
 const Divider = () => <div className={lineStyle} />;
@@ -49,6 +59,7 @@ const contactQuestions = [
     icon: instagramIcon,
     alt: "Instagram",
     label: "@shpeucr",
+    href: "https://www.instagram.com/shpeucr/",
     textSize: "md:text-[15px] text-[8px]",
     tweak: "md:-mt-[5px] pb-[10px] -mt-[2px]",
   },
@@ -56,16 +67,17 @@ const contactQuestions = [
     icon: emailIcon,
     alt: "Email",
     label: "shpeucr@gmail.com",
+    href: "mailto:shpeucr@gmail.com",
     textSize: "md:text-[12px] text-[7px]",
     tweak: "md:-mt-[15px] pb-[12px] -mt-[7px]",
   },
 ];
 
 const socialLinks = [
-  { icon: discordIcon, alt: "Discord", label: "Discord" },
-  { icon: newsIcon, alt: "Newsletter", label: "Newsletter" },
-  { icon: linkedinIcon, alt: "LinkedIn", label: "LinkedIn" },
-  { icon: facebookIcon, alt: "Facebook", label: "Facebook" },
+  { icon: discordIcon, alt: "Discord", label: "Discord", href: "https://discord.com/invite/AbUrTPBja6", },
+  { icon: newsIcon, alt: "Newsletter", label: "Newsletter", href: "/" },
+  { icon: linkedinIcon, alt: "LinkedIn", label: "LinkedIn", href: "https://www.linkedin.com/company/shpe-at-ucr/", },
+  { icon: facebookIcon, alt: "Facebook", label: "Facebook", href: "https://www.facebook.com/groups/shpeucr/", },
 ];
 
 const ContactUs = () => {
@@ -100,14 +112,14 @@ const ContactUs = () => {
       </div>
       <div className={margins}>
         <div className={subHeaderStyle}>Connect With Us!</div>
-        <div className="mt-[25px] flex flex-col items-center gap-[20px] md:flex-row">
+        <div className="mt-[25px] flex flex-col items-center gap-[20px] lg:flex-row">
           {/* row 1 */}
-          <div className="flex items-center justify-center pb-[25px] md:pb-[0px]">
+          <div className="flex items-center justify-center pb-[25px] lg:pb-[0px]">
             <ContactCircle {...socialLinks[0]} />
             <Divider />
             <ContactCircle {...socialLinks[1]} />
           </div>
-          <div className="justify-ceter -mx-[20px] hidden items-center md:block">
+          <div className="justify-ceter -mx-[20px] hidden items-center lg:block">
             <Divider />
           </div>
           {/* row 2 */}
