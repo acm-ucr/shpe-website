@@ -16,7 +16,7 @@ const TitleBanner = ({ title, description, icon, decoration }: titleData) => {
         src={decoration}
         alt="Decor"
       />
-      <div className="absolute top-3/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-row items-center gap-3">
+      <div className="absolute top-3/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-row items-center gap-2">
         {icon && (
           <Image
             className="h-12 w-12 md:h-auto md:w-auto"
