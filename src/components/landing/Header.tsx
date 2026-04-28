@@ -35,7 +35,7 @@ const LandingHeader = () => {
           className="absolute top-14 right-[18rem] hidden h-auto w-[8.75rem] rotate-[-14deg] object-contain drop-shadow-[0_14px_12px_rgba(0,31,91,0.3)] sm:block lg:right-[25rem] lg:w-[10rem]"
         />
         <Image
-          src="/home/rocket-transparent.png"
+          src="/home/rocket-transparent.webp"
           alt=""
           width={501}
           height={736}
