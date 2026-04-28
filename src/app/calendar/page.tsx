@@ -5,12 +5,7 @@ import TitleBanner from "@/components/Title";
 const Calendar = () => {
   return (
     <div>
-      <TitleBanner
-        title="Calender"
-        description=""
-        icon={CalenderIcon}
-        decoration={Decor}
-      />
+      <TitleBanner title="CALENDAR" icon={CalenderIcon} decoration={Decor} />
       <p>Calendar</p>
     </div>
   );

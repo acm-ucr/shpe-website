@@ -5,12 +5,7 @@ import TitleBanner from "@/components/Title";
 const Gallery = () => {
   return (
     <div>
-      <TitleBanner
-        title="Gallery"
-        description=""
-        icon={GalleryIcon}
-        decoration={Decor}
-      />
+      <TitleBanner title="GALLERY" icon={GalleryIcon} decoration={Decor} />
       <p>Gallery</p>
     </div>
   );

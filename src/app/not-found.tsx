@@ -8,12 +8,7 @@ import TitleBanner from "@/components/Title";
 const NotFound = () => {
   return (
     <div>
-      <TitleBanner
-        title=""
-        description=""
-        icon={Questionmark}
-        decoration={Gears}
-      />
+      <TitleBanner title="" icon={Questionmark} decoration={Gears} />
       <div className="flex h-screen flex-col items-center justify-center">
         {
           <Image

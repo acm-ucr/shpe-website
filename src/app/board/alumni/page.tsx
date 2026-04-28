@@ -5,12 +5,7 @@ import TitleBanner from "@/components/Title";
 const Alumni = () => {
   return (
     <div>
-      <TitleBanner
-        title="Alumni"
-        description=""
-        icon={GradCap}
-        decoration={Decor}
-      />
+      <TitleBanner title="ALUMNI" icon={GradCap} decoration={Decor} />
       <p>Alumni</p>
     </div>
   );

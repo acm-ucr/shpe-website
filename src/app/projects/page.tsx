@@ -5,12 +5,7 @@ import TitleBanner from "@/components/Title";
 const Projects = () => {
   return (
     <div>
-      <TitleBanner
-        title="Solar Boat Project"
-        description=""
-        icon={Boat}
-        decoration={Decor}
-      />
+      <TitleBanner title="SOLAR BOAT PROJECT" icon={Boat} decoration={Decor} />
       <p>Projects</p>
     </div>
   );
