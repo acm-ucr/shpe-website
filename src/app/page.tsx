@@ -1,7 +1,6 @@
 import OurMission from "@/components/landing/ourMission";
 import Events from "@/components/landing/events";
 import RecentEvents from "@/components/landing/recentEvents";
-import Footer from "@/components/board/footer";
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       />
       <Events></Events>
       <RecentEvents></RecentEvents>
-      <Footer></Footer>
     </div>
   );
 };
