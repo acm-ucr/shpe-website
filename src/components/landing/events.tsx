@@ -11,15 +11,17 @@ const Events = () => {
       <div className="flex flex-row gap-x-10">
         {eventsData.map((item) => (
           <div className="flex flex-col items-center">
-            <div className="flex flex-col w-72 items-center">
+            <div className="flex w-72 flex-col items-center">
               <Image
-                className={"h-[17rem] w-full rounded-3xl aspect-square object-cover"}
+                className={
+                  "aspect-square h-[17rem] w-full rounded-3xl object-cover"
+                }
                 src={item.Pictures}
                 alt={item.Alt}
               />
 
               <div
-                className={`-mt-16 h-14 w-64 rounded-3xl ${item.PictureBg} flex items-center justify-center font-shpe-beachwood text-shpe-white-100 italic text-4xl font-semibold`}
+                className={`-mt-16 h-14 w-64 rounded-3xl ${item.PictureBg} font-shpe-beachwood text-shpe-white-100 flex items-center justify-center text-4xl font-semibold italic`}
               >
                 {item.PictureTag}
               </div>
