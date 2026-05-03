@@ -3,7 +3,7 @@ import LandingHeader from "@/components/landing/Header";
 
 const Home = () => {
   return (
-    <div className="w-screen items-center justify-center">
+    <div className=" items-center justify-center">
       <LandingHeader />
       <OurMission
         title="OUR MISSION"
