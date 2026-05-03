@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-shpe-white-100 border-shpe-blue-200 font-shpe-univers-condensed w-fill m-5 flex h-20 flex-row items-center justify-between justify-self-center rounded-3xl border px-5">
-      <div className="flex h-14 w-max divide-x divide-black">
+      <div className="z-50 flex h-14 w-max divide-x divide-black">
         <Link href="/" aria-label="home">
           <Image
             className="h-full w-fit object-contain pr-2.5"
