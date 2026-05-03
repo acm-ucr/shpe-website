@@ -14,14 +14,14 @@ const Events = () => {
             <div className="flex w-72 flex-col items-center">
               <Image
                 className={
-                  "aspect-square h-[17rem] w-full rounded-3xl object-cover"
+                  "aspect-square h-[17rem] w-full rounded-[30px] object-cover"
                 }
                 src={item.Pictures}
                 alt={item.Alt}
               />
 
               <div
-                className={`-mt-16 h-14 w-64 rounded-3xl ${item.PictureBg} font-shpe-beachwood text-shpe-white-100 flex items-center justify-center text-4xl font-semibold italic`}
+                className={`mx-1 -mt-16 h-14 w-69 rounded-[25px] ${item.PictureBg} font-shpe-beachwood text-shpe-white-100 flex items-center justify-center text-4xl font-semibold italic`}
               >
                 {item.PictureTag}
               </div>
