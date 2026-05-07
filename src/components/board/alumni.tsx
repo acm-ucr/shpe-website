@@ -8,7 +8,7 @@ interface AlumniCardProps {
 
 const AlumniCard = (props: AlumniCardProps) => {
   return (
-      <a
+    <a
       href={props.linkedIn}
       target="_blank"
       rel="noopener noreferrer"
@@ -20,13 +20,8 @@ const AlumniCard = (props: AlumniCardProps) => {
       <span className="font-shpe-univers-condensed text-sm font-semibold">
         {props.year}
       </span>
-      <div className="mt-2 flex items-center justify-center rounded-md not-[]:p-1">
-        <Image
-          src="/LinkedIn.svg"
-          alt="LinkedIn"
-          width={20}
-          height={20}
-        />
+      <div className="not-[]:p-1 mt-2 flex items-center justify-center rounded-md">
+        <Image src="/LinkedIn.svg" alt="LinkedIn" width={20} height={20} />
       </div>
     </a>
   );
