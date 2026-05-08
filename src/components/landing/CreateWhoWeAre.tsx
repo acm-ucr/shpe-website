@@ -1,10 +1,9 @@
-import whoWeAreImage from '@/public/WhoWeAre.webp'
+import whoWeAreImage from "@/public/WhoWeAre.webp";
 
 interface WhoAreWeProps {
-  title: string
-  text: string
+  title: string;
+  text: string;
 }
-
 
 const WhoWeAre = (props: WhoAreWeProps) => {
   return (
