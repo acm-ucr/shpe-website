@@ -1,11 +1,19 @@
-const CreateWhoWeAre = (props: { title: string; text: string }) => {
+import whoWeAreImage from '@/public/WhoWeAre.webp'
+
+interface WhoAreWeProps {
+  title: string
+  text: string
+}
+
+
+const WhoWeAre = (props: WhoAreWeProps) => {
   return (
     <div className="flex w-full items-start justify-between py-20">
       <div className="flex w-1/2 justify-start">
         <img
-          src="/WhoWeAre.webp"
+          src={whoWeAreImage.src}
           alt="Who We Are"
-          className="h-auto max-w-full shadow-lg"
+          className="h-auto max-w-full object-contain shadow-lg"
         />
       </div>
       <div className="flex w-1/2 flex-col items-center px-16">
@@ -19,4 +27,4 @@ const CreateWhoWeAre = (props: { title: string; text: string }) => {
     </div>
   );
 };
-export default CreateWhoWeAre;
+export default WhoWeAre;
