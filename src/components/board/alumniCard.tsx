@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkedInLogo from "@/public/LinkedIn.svg"
+import LinkedInLogo from "@/public/LinkedIn.svg";
 
 interface AlumniCardProps {
   name: string;
@@ -7,7 +7,7 @@ interface AlumniCardProps {
   linkedIn: string;
 }
 
-const AlumniCard = ({name, year, linkedIn}: AlumniCardProps) => {
+const AlumniCard = ({ name, year, linkedIn }: AlumniCardProps) => {
   return (
     <a
       href={linkedIn}

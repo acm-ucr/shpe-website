@@ -8,7 +8,7 @@ const AlumniPage = () => {
         Our Alumni
       </h2>
       <div className="grid grid-cols-3 gap-6">
-        {alumni.map(({name, year, linkedIn}) => (
+        {alumni.map(({ name, year, linkedIn }) => (
           <AlumniCard
             key={linkedIn}
             name={name}
