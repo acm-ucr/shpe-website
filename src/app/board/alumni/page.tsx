@@ -1,5 +1,5 @@
-import AlumniCard from "@/components/board/alumni";
-import { alumni } from "@/components/data/alumni";
+import AlumniCard from "@/components/board/alumniCard";
+import { alumni } from "@/data/alumniData";
 
 const AlumniPage = () => {
   return (
@@ -8,12 +8,12 @@ const AlumniPage = () => {
         Our Alumni
       </h2>
       <div className="grid grid-cols-3 gap-6">
-        {alumni.map((alum) => (
+        {alumni.map(({name, year, linkedIn}) => (
           <AlumniCard
-            key={alum.linkedIn}
-            name={alum.name}
-            year={alum.year}
-            linkedIn={alum.linkedIn}
+            key={linkedIn}
+            name={name}
+            year={year}
+            linkedIn={linkedIn}
           />
         ))}
       </div>
