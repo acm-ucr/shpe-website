@@ -1,11 +1,11 @@
 import whoWeAreImage from "@/public/WhoWeAre.webp";
 
-interface WhoAreWeProps {
+interface WhoWeAreProps {
   title: string;
   text: string;
 }
 
-const WhoWeAre = (props: WhoAreWeProps) => {
+const WhoWeAre = ({ title, text }: WhoWeAreProps) => {
   return (
     <div className="flex w-full items-start justify-between py-20">
       <div className="flex w-1/2 justify-start">
@@ -17,10 +17,10 @@ const WhoWeAre = (props: WhoAreWeProps) => {
       </div>
       <div className="flex w-1/2 flex-col items-center px-16">
         <h1 className="font-shpe-beachwood text-shpe-blue-200 mt-15 mb-9 scale-y-140 text-center text-5xl font-semibold tracking-tight uppercase">
-          {props.title}
+          {title}
         </h1>
         <p className="font-shpe-univers-condensed px-10 text-center text-xl leading-7">
-          {props.text}
+          {text}
         </p>
       </div>
     </div>
