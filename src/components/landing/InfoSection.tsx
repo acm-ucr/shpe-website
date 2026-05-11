@@ -1,17 +1,19 @@
-import whoWeAreImage from "@/public/WhoWeAre.webp";
+import Image, { StaticImageData } from "next/image";
 
 interface WhoWeAreProps {
   title: string;
   text: string;
+  image: StaticImageData;
+  alt: string;
 }
 
-const WhoWeAre = ({ title, text }: WhoWeAreProps) => {
+const InfoSection = ({ title, text, image, alt }: WhoWeAreProps) => {
   return (
-    <div className="flex w-full items-start justify-between py-20">
+    <div className="flex w-full items-start justify-between">
       <div className="flex w-1/2 justify-start">
-        <img
-          src={whoWeAreImage.src}
-          alt="Who We Are"
+        <Image
+          src={image}
+          alt={alt}
           className="h-auto max-w-full object-contain shadow-lg"
         />
       </div>
@@ -26,4 +28,4 @@ const WhoWeAre = ({ title, text }: WhoWeAreProps) => {
     </div>
   );
 };
-export default WhoWeAre;
+export default InfoSection;
