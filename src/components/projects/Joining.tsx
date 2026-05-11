@@ -3,11 +3,35 @@ import Checklist from "@/public/Checklist.webp";
 import Cursor from "@/public/Cursor.webp";
 import SBConstruction from "@/public/SBConstruction.webp";
 import SBQRCode from "@/public/SBQRCode.webp";
+import Gear from "@/public/gear.webp";
 
 const Joining = () => {
   return (
-    <div className="flex flex-col items-center bg-[#72A9BE80]">
-      <p className="mt-5 mb-3 text-5xl font-semibold scale-y-125 font-shpe-beachwood text-blue-950">
+    <div className="relative flex flex-col items-center bg-[#72A9BE80]">
+      <Image
+        className="absolute top-10 left-15 hidden w-30 rotate-12 opacity-70 md:block"
+        src={Gear}
+        alt=""
+      />
+      <Image
+        className="absolute top-10 right-0 hidden w-50 opacity-70 md:block"
+        src={Gear}
+        alt=""
+      />
+      <Image
+        className="absolute bottom-8 left-0 hidden w-45 -rotate-90 opacity-70 md:block"
+        src={Gear}
+        alt=""
+      />
+      <Image
+        className="absolute right-15 bottom-8 hidden w-30 -rotate-90 opacity-70 md:block"
+        src={Gear}
+        alt=""
+      />
+      <p className="font-shpe-beachwood mt-5 mb-3 hidden scale-y-125 text-5xl font-semibold text-blue-950 md:block">
+        Interested In Joining?
+      </p>
+      <p className="font-shpe-beachwood mt-5 mb-3 scale-y-125 text-4xl font-semibold text-blue-950 md:hidden">
         Interested In Joining?
       </p>
       <div className="hidden w-full md:flex md:items-start md:justify-center md:gap-10">
@@ -15,31 +39,26 @@ const Joining = () => {
           <Image
             src={SBConstruction}
             alt="Construction"
-            className="z-10 h-auto w-96"
+            className="z-10 h-auto w-95"
           />
-          <p className="mt-2 text-2xl font-medium scale-y-125 text-center font-shpe-beachwood text-blue-950">
+          <p className="font-shpe-beachwood mt-2 mb-5 w-95 scale-y-125 text-center text-2xl font-medium text-blue-950">
             Join us at our next Solar Boat General Meeting!
           </p>
         </div>
-        <div className="flex flex-col items-center">
-          <Image
-            src={SBQRCode}
-            alt="QR Code"
-            className="z-10 h-auto w-64"
-          />
+        <div className="ml-10 flex flex-col items-center">
+          <Image src={SBQRCode} alt="QR Code" className="z-10 h-auto w-65" />
           <div className="mt-4 flex flex-col items-center">
-            <p className="mt-2 text-2xl font-medium scale-y-125 text-center font-shpe-beachwood text-blue-950">
+            <p className="font-shpe-beachwood mt-2 w-95 scale-y-125 text-center text-2xl font-medium text-blue-950">
               Fill out the interest form here to get started.
             </p>
             <Image
               src={Cursor}
               alt="Cursor"
-              className="h-auto w-12"
+              className="-mt-5 -ml-55 h-auto w-25"
             />
           </div>
         </div>
       </div>
-
 
       <div className="flex flex-col items-center md:hidden">
         <Image
@@ -47,7 +66,7 @@ const Joining = () => {
           alt="Construction"
           className="z-10 mb-6 h-auto w-4/5"
         />
-        <p className="text-center text-lg font-medium scale-y-125 font-shpe-beachwood text-blue-950">
+        <p className="font-shpe-beachwood scale-y-125 text-center text-lg font-medium text-blue-950">
           Join us at our next Solar Boat General Meeting!
         </p>
         <Image
@@ -55,10 +74,16 @@ const Joining = () => {
           alt="Checklist"
           className="z-10 mb-5 h-auto w-4/5"
         />
-        <div></div>
-        <p className="text-center text-lg font-medium scale-y-125 font-shpe-beachwood text-blue-950">
-          Fill out the interest form here to get started.
-        </p>
+        <div className="flex flex-row items-center">
+          <Image
+            src={Cursor}
+            alt="Cursor"
+            className="-mr-10 -ml-10 h-auto w-15"
+          />
+          <p className="font-shpe-beachwood mb-10 w-55 scale-y-125 text-center text-lg font-medium text-blue-950">
+            Fill out the interest form here to get started.
+          </p>
+        </div>
       </div>
     </div>
   );
