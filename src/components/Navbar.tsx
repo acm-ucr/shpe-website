@@ -5,7 +5,7 @@ import NavbarArrow from "@/public/navbar_arrow.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { navbarLinks } from "@/components/data/navbarLinks";
+import { navbarLinks } from "@/data/navbarLinks";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState("");

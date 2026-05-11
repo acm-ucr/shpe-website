@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { eventsData } from "@/components/data/events";
+import { eventsData } from "@/data/events";
 
 const Events = () => {
   return (
