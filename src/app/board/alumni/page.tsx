@@ -6,11 +6,9 @@ import TitleBanner from "@/components/Title";
 
 const AlumniPage = () => {
   return (
-    <div className="flex flex-col items-center px-20 py-10">
-      <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-8 scale-y-140 text-3xl font-semibold tracking-tight uppercase">
-        Our Alumni
-      </h2>
-      <div className="grid grid-cols-3 gap-6">
+    <div className="flex flex-col justify-center">
+      <TitleBanner title="ALUMNI" icon={GradCap} decoration={Decor} />
+      <div className="relative grid grid-cols-3 gap-10 px-30 pt-10">
         {alumni.map(({ name, year, linkedIn }) => (
           <AlumniCard
             key={linkedIn}
