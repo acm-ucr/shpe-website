@@ -1,9 +1,10 @@
 import ContactUs from "@/components/about/contactUs";
+import Landing from "@/components/about/landing";
 
 const About = () => {
   return (
     <div>
-      <p>About</p>
+      <Landing></Landing>
       <ContactUs></ContactUs>
     </div>
   );
