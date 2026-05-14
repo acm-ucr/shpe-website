@@ -43,3 +43,7 @@
   --font-shpe-univers: "Univers", sans-serif;
   --font-shpe-beachwood: "Beachwood", sans-serif;
 }
+
+html {
+  background-color: var(--color-shpe-blue-200);
+}
