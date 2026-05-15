@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import pillarsImg from "@/public/pillars.jpg";
+import pillarsImg from "@/public/pillars.webp";
 
 export interface Pillar {
   title: string;

@@ -28,7 +28,6 @@ export default function OurPillars() {
                   />
                 </div>
 
-                {/* We add a little top padding (pt-4) since flex-1 behaves differently in an h-fit container */}
                 <h3 className="font-shpe-beachwood text-shpe-white-100 flex flex-1 items-center justify-center px-2 pt-4 text-center text-2xl leading-none uppercase">
                   {title}
                 </h3>
