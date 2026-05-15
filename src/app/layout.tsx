@@ -15,7 +15,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className="relative flex min-h-screen flex-col">
+      <body className="relative flex min-h-screen flex-col bg-white">
         <ReactQueryClientProvider>
           <Navbar />
           <main className="flex-grow">{children}</main>
