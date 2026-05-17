@@ -5,6 +5,8 @@ interface BoardOverlayProps {
   image: StaticImageData | string;
   position: string;
   linkedin: string;
+  title: string;
+  quote: string;
 }
 
 const BoardOverlay = ({
@@ -12,11 +14,13 @@ const BoardOverlay = ({
   image,
   position,
   linkedin,
+  title,
+  quote,
 }: BoardOverlayProps) => {
   return (
-    <div className="bg-shpe-blue-200 text-shpe-white-100 h-96 w-96 rounded-3xl p-10">
+    <div className="bg-shpe-blue-200 text-shpe-white-100 flex max-w-2xl gap-6 rounded-4xl p-6">
       {/* Left Section */}
-      <div className="flex w-64 flex-col items-center text-center">
+      <div className="flex w-64 flex-col items-center text-left">
         <div className="font-shpe-univers-condensed mb-2 text-lg">
           {position}
         </div>
@@ -25,20 +29,25 @@ const BoardOverlay = ({
           <Image src={image} alt={name} fill className="object-cover" />
         </div>
 
-        <div className="font-shpe-univers-condensed mt-3 text-3xl">
+        <div className="font-shpe-univers-condensed mt-3 text-center text-3xl">
           {name}
         </div>
 
-        <a href={linkedin} target="_blank" rel="noreferrer">
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noreferrer"
+          className="absolute right-6 bottom-6"
+        >
           <Image src="/LinkedIn.svg" alt="LinkedIn" width={48} height={48} />
         </a>
       </div>
 
       {/* Right Section */}
-      <div className="flex-1">
-        <p className="text-lg leading-relaxed">
-          Replace this text with a board member bio.
-        </p>
+      <div className="flex flex-1 flex-col pt-12">
+        <div className="font-shpe-univers-condensed text-3xl">{title}</div>
+
+        <div className="mt-5 text-lg italic opacity-80">"{quote}"</div>
       </div>
     </div>
   );
