@@ -29,10 +29,12 @@ const Board = () => {
               }
               popupComponent={
                 <BoardOverlay
-                    name={member.name}
-                    image={member.image}
-                    position={member.position}
-                    linkedin={member.linkedin}
+                  name={member.name}
+                  image={member.image}
+                  position={member.position}
+                  linkedin={member.linkedin}
+                  title={member.title}
+                  quote={member.quote}
                 />
               }
             />
