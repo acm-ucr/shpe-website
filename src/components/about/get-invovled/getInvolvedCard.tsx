@@ -16,10 +16,9 @@ const GetInvolvedCard = ({
 }: GetInvolvedCardProps) => {
   return (
     <div className="relative">
-      <Image src={image} alt={title} className="rounded-2xl" />
       {text ? (
-        <div className="bg-shpe-blue-200 absolute inset-0 rounded-2xl">
-          <div className="flex flex-col items-center px-8 text-center text-white">
+        <div className="bg-shpe-blue-200 min-h-[50vh] rounded-2xl">
+          <div className="relative flex flex-col items-center px-8 text-center text-white">
             <div className="font-shpe-beachwood py-8 text-4xl font-semibold">
               {title}
             </div>
@@ -27,17 +26,20 @@ const GetInvolvedCard = ({
           </div>
         </div>
       ) : (
-        <div
-          className={`absolute bottom-0 left-1/2 mb-4 -translate-x-1/2 ${logo ? `w-11/12` : ""}`}
-        >
-          <div className="bg-shpe-blue-200/70 rounded-2xl px-10 py-3">
-            {logo ? (
-              <Image src={logo} alt={title} />
-            ) : (
-              <div className="font-shpe-beachwood text-center text-5xl font-semibold text-white">
-                {title}
-              </div>
-            )}
+        <div>
+          <Image src={image} alt={title} className="rounded-2xl" />
+          <div
+            className={`absolute bottom-0 left-1/2 mb-4 -translate-x-1/2 ${logo ? `w-11/12` : ""}`}
+          >
+            <div className="bg-shpe-blue-200/70 rounded-2xl px-10 py-3">
+              {logo ? (
+                <Image src={logo} alt={title} />
+              ) : (
+                <div className="font-shpe-beachwood text-center text-5xl font-semibold text-white">
+                  {title}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
