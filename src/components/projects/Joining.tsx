@@ -7,7 +7,7 @@ import Gear from "@/public/gear.webp";
 
 const Joining = () => {
   return (
-    <div className="relative flex flex-col items-center bg-[#72A9BE80]">
+    <div className="bg-shpe-blue-050/50 relative flex flex-col items-center">
       <Image
         className="absolute top-10 left-15 hidden w-30 rotate-12 opacity-70 md:block"
         src={Gear}
@@ -28,10 +28,10 @@ const Joining = () => {
         src={Gear}
         alt=""
       />
-      <p className="font-shpe-beachwood mt-5 mb-3 hidden scale-y-125 text-5xl font-semibold text-blue-950 md:block">
+      <p className="font-shpe-beachwood text-shpe-blue-200 mt-5 mb-3 hidden scale-y-125 text-5xl font-semibold md:block">
         Interested In Joining?
       </p>
-      <p className="font-shpe-beachwood mt-5 mb-3 scale-y-125 text-4xl font-semibold text-blue-950 md:hidden">
+      <p className="font-shpe-beachwood text-shpe-blue-200 mt-5 mb-3 scale-y-125 text-4xl font-semibold md:hidden">
         Interested In Joining?
       </p>
       <div className="hidden w-full md:flex md:items-start md:justify-center md:gap-10">
@@ -41,14 +41,14 @@ const Joining = () => {
             alt="Construction"
             className="z-10 h-auto w-95"
           />
-          <p className="font-shpe-beachwood mt-2 mb-5 w-95 scale-y-125 text-center text-2xl font-medium text-blue-950">
+          <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 mb-5 w-95 scale-y-125 text-center text-2xl font-medium">
             Join us at our next Solar Boat General Meeting!
           </p>
         </div>
         <div className="ml-10 flex flex-col items-center">
           <Image src={SBQRCode} alt="QR Code" className="z-10 h-auto w-65" />
           <div className="mt-4 flex flex-col items-center">
-            <p className="font-shpe-beachwood mt-2 w-95 scale-y-125 text-center text-2xl font-medium text-blue-950">
+            <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 w-95 scale-y-125 text-center text-2xl font-medium">
               Fill out the interest form here to get started.
             </p>
             <Image
@@ -66,7 +66,7 @@ const Joining = () => {
           alt="Construction"
           className="z-10 mb-6 h-auto w-4/5"
         />
-        <p className="font-shpe-beachwood scale-y-125 text-center text-lg font-medium text-blue-950">
+        <p className="font-shpe-beachwood text-shpe-blue-200 scale-y-125 text-center text-lg font-medium">
           Join us at our next Solar Boat General Meeting!
         </p>
         <Image
@@ -80,7 +80,7 @@ const Joining = () => {
             alt="Cursor"
             className="-mr-10 -ml-10 h-auto w-15"
           />
-          <p className="font-shpe-beachwood mb-10 w-55 scale-y-125 text-center text-lg font-medium text-blue-950">
+          <p className="font-shpe-beachwood text-shpe-blue-200 mb-10 w-55 scale-y-125 text-center text-lg font-medium">
             Fill out the interest form here to get started.
           </p>
         </div>
