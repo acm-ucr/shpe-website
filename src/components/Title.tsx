@@ -10,7 +10,7 @@ interface titleData {
 
 const TitleBanner = ({ title, description, icon, decoration }: titleData) => {
   return (
-    <div className="from-shpe-blue-200 to-shpe-blue-150 relative -z-10 -mt-35 flex flex-col items-center justify-center bg-gradient-to-b">
+    <div className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-35 flex flex-col items-center justify-center bg-gradient-to-b">
       <Image
         className="h-auto w-full object-contain"
         src={decoration}
