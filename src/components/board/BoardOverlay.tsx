@@ -1,4 +1,6 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import LinkedInIcon from "@/public/LinkedIn.svg";
 
 interface BoardOverlayProps {
   name: string;
@@ -33,14 +35,6 @@ const BoardOverlay = ({
           {name}
         </div>
 
-        <a
-          href={linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className="absolute right-6 bottom-6"
-        >
-          <Image src="/LinkedIn.svg" alt="LinkedIn" width={48} height={48} />
-        </a>
       </div>
 
       {/* Right Section */}
@@ -49,6 +43,14 @@ const BoardOverlay = ({
 
         <div className="mt-5 text-lg italic opacity-80">"{quote}"</div>
       </div>
+      <Link
+          href={linkedin}
+          target="_blank"
+          rel="noreferrer"
+          className="absolute right-6 bottom-6"
+        >
+          <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
+        </Link>
     </div>
   );
 };
