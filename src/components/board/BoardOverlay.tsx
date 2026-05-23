@@ -34,7 +34,6 @@ const BoardOverlay = ({
         <div className="font-shpe-univers-condensed mt-3 text-center text-3xl">
           {name}
         </div>
-
       </div>
 
       {/* Right Section */}
@@ -44,13 +43,13 @@ const BoardOverlay = ({
         <div className="mt-5 text-lg italic opacity-80">"{quote}"</div>
       </div>
       <Link
-          href={linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className="absolute right-6 bottom-6"
-        >
-          <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
-        </Link>
+        href={linkedin}
+        target="_blank"
+        rel="noreferrer"
+        className="absolute right-6 bottom-6"
+      >
+        <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
+      </Link>
     </div>
   );
 };
