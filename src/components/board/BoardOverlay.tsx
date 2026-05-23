@@ -46,7 +46,7 @@ const BoardOverlay = ({
         href={linkedin}
         target="_blank"
         rel="noreferrer"
-        className="absolute right-6 bottom-6"
+        className="mt-auto self-end"
       >
         <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
       </Link>
