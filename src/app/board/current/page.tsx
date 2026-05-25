@@ -1,4 +1,3 @@
-import Decor from "@/public/banners/Gallery-MeetTheTeam.webp";
 import TitleBanner from "@/components/Title";
 import BoardCard from "@/components/board/BoardCard";
 import { boardData } from "@/data/boardData";
@@ -10,7 +9,6 @@ const Board = () => {
       <TitleBanner
         title="MEET THE TEAM"
         description="Click each board member to learn more about them!"
-        decoration={Decor}
       />
       <div className="mt-5 flex w-full justify-center px-6">
         <div className="flex w-full max-w-6xl flex-wrap justify-center gap-x-40 gap-y-10">
