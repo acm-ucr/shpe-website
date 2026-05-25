@@ -20,10 +20,10 @@ const BoardOverlay = ({
   quote,
 }: BoardOverlayProps) => {
   return (
-    <div className="bg-shpe-blue-200 text-shpe-white-100 flex max-w-2xl gap-6 rounded-4xl p-6">
+    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-160 flex-row gap-6 rounded-4xl border-2 p-6">
       {/* Left Section */}
-      <div className="flex w-64 flex-col items-center text-left">
-        <div className="font-shpe-univers-condensed mb-2 text-lg">
+      <div className="flex w-72 flex-col justify-center text-left">
+        <div className="font-shpe-univers-condensed mb-2 text-center text-lg">
           {position}
         </div>
 
@@ -41,15 +41,15 @@ const BoardOverlay = ({
         <div className="font-shpe-univers-condensed text-3xl">{title}</div>
 
         <div className="mt-5 text-lg italic opacity-80">"{quote}"</div>
+        <Link
+          href={linkedin}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-auto self-end"
+        >
+          <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
+        </Link>
       </div>
-      <Link
-        href={linkedin}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-auto self-end"
-      >
-        <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
-      </Link>
     </div>
   );
 };
