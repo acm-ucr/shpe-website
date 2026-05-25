@@ -46,7 +46,11 @@ const Joining = () => {
           </p>
         </div>
         <div className="ml-10 flex flex-col items-center">
-          <Image src={SBQRCode} alt="QR Code" className="z-10 h-auto w-65 rounded-xl" />
+          <Image
+            src={SBQRCode}
+            alt="QR Code"
+            className="z-10 h-auto w-65 rounded-xl"
+          />
           <div className="mt-4 flex flex-col items-center">
             <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 w-95 scale-y-125 text-center text-2xl font-medium">
               Fill out the interest form here to get started.
