@@ -7,9 +7,9 @@ import rocket from "@/public/home/rocket-transparent.webp";
 
 const LandingHeader = () => {
   return (
-    <header className="text-shpe-white-100 from-shpe-blue-200 to-shpe-blue-150 relative isolate z-0 -mt-30 flex h-120 w-full justify-center md:justify-between overflow-hidden bg-linear-180 pt-25">
-      <div className="relative z-10 my-auto flex w-full flex-col items-center md:items-start pl-6 sm:pl-12 lg:pl-24">
-        <h1 className="font-shpe-beachwood scale-y-140 text-3xl text-center md:text-start leading-[0.93] font-semibold uppercase drop-shadow-[0_5px_2px_rgba(0,0,0,0.35)] md:text-4xl lg:text-5xl">
+    <header className="text-shpe-white-100 from-shpe-blue-200 to-shpe-blue-150 relative isolate z-0 -mt-30 flex h-120 w-full justify-center overflow-hidden bg-linear-180 pt-25 md:justify-between">
+      <div className="relative z-10 my-auto flex w-full flex-col items-center pl-6 sm:pl-12 md:items-start lg:pl-24">
+        <h1 className="font-shpe-beachwood scale-y-140 text-center text-3xl leading-[0.93] font-semibold uppercase drop-shadow-[0_5px_2px_rgba(0,0,0,0.35)] md:text-start md:text-4xl lg:text-5xl">
           Society of Hispanic <br /> Professional Engineers <br /> @
           <span className="text-[#FFB81C]"> UCR</span>
         </h1>
@@ -22,11 +22,27 @@ const LandingHeader = () => {
         </Link>
       </div>
       {/*<Image src={Banner} alt="Landing" className="w-3xl object-cover" />*/}
-      <div className=" h-full w-full md:w-160 right-0 absolute md:relative top-0">
-        <Image src={gear} alt="gear" className="absolute bottom-15 -left-10 md:top-15 md:left-10 w-40 md:w-30 rotate-7 "/>
-        <Image src={rocket} alt="rocket" className="absolute bottom-10 left-0 w-25 -rotate-45 hidden md:block"/>
-        <Image src={wrench} alt="wrench" className="absolute w-40 -rotate-95 top-15 md:top-5 -right-10 md:right-0"/>
-        <Image src={gear} alt="gear" className="absolute w-45 md:w-50 -scale-x-100 bottom-5 -right-12 md:right-5"/>
+      <div className="absolute top-0 right-0 h-full w-full md:relative md:w-160">
+        <Image
+          src={gear}
+          alt="gear"
+          className="absolute bottom-15 -left-10 w-40 rotate-7 md:top-15 md:left-10 md:w-30"
+        />
+        <Image
+          src={rocket}
+          alt="rocket"
+          className="absolute bottom-10 left-0 hidden w-25 -rotate-45 md:block"
+        />
+        <Image
+          src={wrench}
+          alt="wrench"
+          className="absolute top-15 -right-10 w-40 -rotate-95 md:top-5 md:right-0"
+        />
+        <Image
+          src={gear}
+          alt="gear"
+          className="absolute -right-12 bottom-5 w-45 -scale-x-100 md:right-5 md:w-50"
+        />
       </div>
     </header>
   );
