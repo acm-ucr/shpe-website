@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import gear from "@/public/gear.webp";
-import wrench from "@/public/wrench.webp";
-import rocket from "@/public/home/rocket-transparent.webp";
+import gear from "@/public/icons/gear.webp";
+import wrench from "@/public/icons/wrench.webp";
+import rocket from "@/public/icons/rocket-transparent.webp";
 //import Banner from "@/public/home/landing.webp";
 
 const LandingHeader = () => {
@@ -21,7 +21,6 @@ const LandingHeader = () => {
           Join SHPE National
         </Link>
       </div>
-      {/*<Image src={Banner} alt="Landing" className="w-3xl object-cover" />*/}
       <div className="absolute top-0 right-0 h-full w-full md:relative md:w-160">
         <Image
           src={gear}

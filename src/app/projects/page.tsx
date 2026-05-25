@@ -1,13 +1,12 @@
-import Boat from "@/public/banners/icons/Sail Boat.webp";
+import Boat from "@/public/icons/Sail Boat.webp";
 import TitleBanner from "@/components/Title";
-import Joinging from "@/components/projects/Joining";
+import Joining from "@/components/projects/Joining";
 
 const Projects = () => {
   return (
     <div>
       <TitleBanner title="SOLAR BOAT PROJECT" icon={Boat} />
-      <p>Projects</p>
-      <Joinging />
+      <Joining />
     </div>
   );
 };

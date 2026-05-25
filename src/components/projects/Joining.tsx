@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Checklist from "@/public/Checklist.webp";
-import Cursor from "@/public/Cursor.webp";
+import Cursor from "@/public/icons/Cursor.webp";
 import SBConstruction from "@/public/SBConstruction.webp";
 import SBQRCode from "@/public/SBQRCode.webp";
-import Gear from "@/public/gear.webp";
+import Gear from "@/public/icons/gear.webp";
 
 const Joining = () => {
   return (
@@ -39,14 +39,14 @@ const Joining = () => {
           <Image
             src={SBConstruction}
             alt="Construction"
-            className="z-10 h-auto w-95"
+            className="z-10 h-auto w-95 rounded-xl"
           />
           <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 mb-5 w-95 scale-y-125 text-center text-2xl font-medium">
             Join us at our next Solar Boat General Meeting!
           </p>
         </div>
         <div className="ml-10 flex flex-col items-center">
-          <Image src={SBQRCode} alt="QR Code" className="z-10 h-auto w-65" />
+          <Image src={SBQRCode} alt="QR Code" className="z-10 h-auto w-65 rounded-xl" />
           <div className="mt-4 flex flex-col items-center">
             <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 w-95 scale-y-125 text-center text-2xl font-medium">
               Fill out the interest form here to get started.

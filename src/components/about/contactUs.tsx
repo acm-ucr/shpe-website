@@ -1,10 +1,10 @@
 import instagramIcon from "@/public/footer/instagram.webp";
-import emailIcon from "@/public/email2.webp";
+import emailIcon from "@/public/icons/email2.webp";
 import discordIcon from "@/public/footer/discord.webp";
 import newsIcon from "@/public/footer/news.webp";
 import linkedinIcon from "@/public/footer/linkedIn.webp";
 import facebookIcon from "@/public/footer/facebook.webp";
-import gearImage from "@/public/gear.webp";
+import gearImage from "@/public/icons/gear.webp";
 
 import Image from "next/image";
 import { StaticImageData } from "next/image";

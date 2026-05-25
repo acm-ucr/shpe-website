@@ -1,6 +1,6 @@
 import AlumniCard from "@/components/board/alumniCard";
 import { alumni } from "@/data/alumniData";
-import GradCap from "@/public/banners/icons/Graduation Cap.webp";
+import GradCap from "@/public/icons/Graduation Cap.webp";
 import TitleBanner from "@/components/Title";
 
 const AlumniPage = () => {

@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import gear from "@/public/gear.webp";
-import wrench from "@/public/wrench.webp";
+import gear from "@/public/icons/gear.webp";
+import wrench from "@/public/icons/wrench.webp";
 
 interface titleData {
   title: string;

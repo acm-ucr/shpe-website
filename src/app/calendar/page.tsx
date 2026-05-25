@@ -1,4 +1,4 @@
-import CalenderIcon from "@/public/banners/icons/Calendar.webp";
+import CalenderIcon from "@/public/icons/Calendar.webp";
 import TitleBanner from "@/components/Title";
 
 const Calendar = () => {

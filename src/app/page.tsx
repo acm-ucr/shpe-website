@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div className="items-center justify-center">
       <LandingHeader />
-      {landingInfo.map(({ title, text, image, alt }) => (
-        <InfoSection title={title} text={text} image={image} alt={alt} />
+      {landingInfo.map(({ title, text, image, alt }, index) => (
+        <InfoSection title={title} text={text} image={image} alt={alt} key={index} />
       ))}
       <OurMission
         title="OUR MISSION"

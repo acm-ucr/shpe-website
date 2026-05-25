@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NotFoundImage from "@/public/404Image.svg";
 import Link from "next/link";
-import Questionmark from "@/public/banners/icons/question mark.webp";
+import Questionmark from "@/public/icons/question mark.webp";
 import TitleBanner from "@/components/Title";
 
 const NotFound = () => {
