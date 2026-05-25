@@ -1,11 +1,10 @@
 import CalenderIcon from "@/public/banners/icons/Calendar.webp";
-import Decor from "@/public/banners/Gallery-MeetTheTeam.webp";
 import TitleBanner from "@/components/Title";
 
 const Calendar = () => {
   return (
     <div>
-      <TitleBanner title="CALENDAR" icon={CalenderIcon} decoration={Decor} />
+      <TitleBanner title="CALENDAR" icon={CalenderIcon} decoration="gears" />
       <p>Calendar</p>
     </div>
   );

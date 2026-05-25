@@ -1,11 +1,10 @@
 import GalleryIcon from "@/public/banners/icons/Picture.webp";
-import Decor from "@/public/banners/Gallery-MeetTheTeam.webp";
 import TitleBanner from "@/components/Title";
 
 const Gallery = () => {
   return (
     <div>
-      <TitleBanner title="GALLERY" icon={GalleryIcon} decoration={Decor} />
+      <TitleBanner title="GALLERY" icon={GalleryIcon} decoration="gears" />
       <p>Gallery</p>
     </div>
   );
