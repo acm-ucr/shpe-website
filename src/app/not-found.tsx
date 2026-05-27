@@ -1,15 +1,14 @@
 import Image from "next/image";
 import NotFoundImage from "@/public/404Image.svg";
 import Link from "next/link";
-import Questionmark from "@/public/banners/icons/question mark.webp";
-import Gears from "@/public/banners/404.webp";
+import Questionmark from "@/public/icons/question mark.webp";
 import TitleBanner from "@/components/Title";
 
 const NotFound = () => {
   return (
     <div>
-      <TitleBanner title="" icon={Questionmark} decoration={Gears} />
-      <div className="flex h-screen flex-col items-center justify-center">
+      <TitleBanner title="" icon={Questionmark} decoration="gears" />
+      <div className="flex flex-col items-center">
         {
           <Image
             src={NotFoundImage}
