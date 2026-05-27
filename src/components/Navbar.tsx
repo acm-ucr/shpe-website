@@ -94,7 +94,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="absolute z-[99] flex flex-col gap-1 justify-self-center rounded-3xl border bg-white p-6 text-center text-lg lg:hidden">
+        <div className="absolute z-[99] flex w-full flex-col gap-2 justify-self-center rounded-3xl border bg-white py-2 text-center text-xl lg:hidden">
           {navbarLinks
             .filter(({ name }) => name !== "JOIN US")
             .map(({ link, name, sub }) => (
@@ -121,7 +121,7 @@ const Navbar = () => {
                     </button>
 
                     {sub && openMenu === name && (
-                      <div className="divide-shpe-blue-150 flex flex-col divide-y">
+                      <div className="divide-shpe-blue-150 flex flex-col divide-y text-lg">
                         {sub.map((item) => (
                           <Link
                             key={item.subname}
