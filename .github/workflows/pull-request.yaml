@@ -1,4 +1,4 @@
-name: ACM UCR Website
+name: SHPE UCR Website
 on:
   pull_request:
     branches: [main, dev]
