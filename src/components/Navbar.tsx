@@ -11,18 +11,26 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [iconRot, changeRot] = useState("rotate-0");
+
 
   const toggleMenu = (name: string) => {
     setOpenMenu(openMenu === name ? "" : name);
-    if (iconRot == "rotate-0") {
-      changeRot("rotate-180");
-    } else {
-      changeRot("rotate-0");
-    }
-  };
+    };
+
+  const arrowRotation = (name: string) =>
+    openMenu === name ? "rotate-180" : "rotate-0";
 
   return (
+    <div>
+      {isMobileMenuOpen && (
+      <button
+        className="fixed inset-0 z-[80] bg-black/20 lg:hidden"
+        onClick={() => {
+          setIsMobileMenuOpen(false);
+          setOpenMenu("");
+        }}
+      />
+    )}
     <div className="font-shpe-univers-condensed relative z-[100] m-5">
       <div className="bg-shpe-white-100 border-shpe-blue-200 flex h-16 w-full flex-row items-center justify-between justify-self-center rounded-2xl border lg:h-20 lg:rounded-3xl lg:px-5">
         <div className="flex h-full items-center pr-20 lg:pr-0">
@@ -59,7 +67,7 @@ const Navbar = () => {
                 >
                   {name}
                   <Image
-                    className={`h-2 w-3 duration-150 ease-in ${iconRot}`}
+                    className={`h-2 w-3 duration-150 ease-in ${arrowRotation(name)}`}
                     src={NavbarArrow}
                     alt="Navbar Arrow"
                   />
@@ -95,6 +103,12 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="absolute z-[99] flex w-full flex-col gap-2 justify-self-center rounded-3xl border bg-white py-2 text-center text-xl lg:hidden">
+          {openMenu && (
+            <button
+              className="absolute inset-0 z-[150] rounded-3xl bg-black/20"
+              onClick={() => setOpenMenu("")}
+              />
+            )}
           {navbarLinks
             .filter(({ name }) => name !== "JOIN US")
             .map(({ link, name, sub }) => (
@@ -114,19 +128,19 @@ const Navbar = () => {
                     >
                       {name}
                       <Image
-                        className={`h-2 w-2 transition-transform duration-150 ease-in ${iconRot}`}
+                        className={`h-2 w-2 transition-transform duration-150 ease-in ${arrowRotation(name)}`}
                         src={NavbarArrow}
                         alt="Navbar Arrow"
                       />
                     </button>
 
                     {sub && openMenu === name && (
-                      <div className="divide-shpe-blue-150 flex flex-col divide-y text-lg">
+                      <div className="absolute left-1/2 top-18 rounded-md z-[200] w-30 -translate-x-1/2 py-2 overflow-hidden flex flex-col text-lg shadow-xl bg-shpe-white-100 lg:hidden">
                         {sub.map((item) => (
                           <Link
                             key={item.subname}
                             href={item.sublink}
-                            className="py-1"
+                            className="py-2 border-b-2 mx-5 last:border-b-0 border-shpe-blue-150"
                             onClick={() => {
                               setIsMobileMenuOpen(false);
                               setOpenMenu("");
@@ -143,6 +157,7 @@ const Navbar = () => {
             ))}
         </div>
       )}
+    </div>
     </div>
   );
 };
