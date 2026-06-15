@@ -9,7 +9,7 @@ const Landing = () => {
   return (
     <div>
       {/* DESKTOP */}
-      <section className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-30 hidden overflow-hidden bg-gradient-to-b lg:flex lg:min-h-[570px] lg:flex-col lg:items-center lg:justify-center">
+      <section className="from-shpe-blue-200 to-shpe-blue-150 relative hidden overflow-hidden bg-gradient-to-b lg:flex lg:min-h-[570px] lg:flex-col lg:items-center lg:justify-center">
         <Image
           src={gearImage}
           alt="gear"
@@ -37,7 +37,7 @@ const Landing = () => {
       </section>
 
       {/* MOBILE */}
-      <section className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-30 overflow-hidden bg-gradient-to-b px-4 py-10 lg:hidden">
+      <section className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-40 -mt-40 pt-10 overflow-hidden bg-gradient-to-b px-4 py-10 lg:hidden">
         <Image
           src={gearImage}
           alt="gear"
@@ -48,7 +48,7 @@ const Landing = () => {
           alt="wrench"
           className="absolute top-12 right-[-40px] w-[200px] rotate-[265deg]"
         />
-        <div className="relative z-10 flex flex-col items-center pt-15 text-center">
+        <div className="relative z-10 flex flex-col items-center pt-25 text-center">
           <h1 className="font-shpe-beachwood text-shpe-white-100 scale-y-125 text-[50px] font-bold">
             ABOUT US
           </h1>
@@ -60,25 +60,22 @@ const Landing = () => {
       </section>
 
       {/* GROUP IMAGE SECTION */}
-      <section className="relative px-4 py-20 lg:flex lg:justify-center">
+      <section className="relative md:px-4 py-10 md:flex md:justify-center">
         <Image
           src={gearImage}
           alt="gear"
-          className="absolute top-25 left-24 hidden w-[200px] rotate-6 opacity-70 lg:block"
+          className="absolute top-0 left-1/20 hidden w-[200px] rotate-6 opacity-70 md:block"
         />
         <Image
           src={gearImage}
           alt="gear"
-          className="absolute right-24 bottom-22 hidden w-[200px] scale-x-[-1] -rotate-10 opacity-70 lg:block"
+          className="absolute right-1/20 bottom-0 hidden w-[200px] scale-x-[-1] -rotate-10 opacity-70 md:block"
         />
-        <div className="relative z-10 aspect-[1094/527] w-full lg:max-w-[1094px]">
-          <Image
+        <Image
             src={groupPic}
             alt="group picture"
-            fill
-            className="object-cover lg:rounded-3xl"
+            className="relative object-cover md:rounded-3xl md:max-w-8/10 aspect-[1094/527]"
           />
-        </div>
       </section>
     </div>
   );
