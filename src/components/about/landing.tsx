@@ -37,7 +37,7 @@ const Landing = () => {
       </section>
 
       {/* MOBILE */}
-      <section className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-40 -mt-40 pt-10 overflow-hidden bg-gradient-to-b px-4 py-10 lg:hidden">
+      <section className="from-shpe-blue-200 to-shpe-blue-150 relative -mt-40 overflow-hidden bg-gradient-to-b px-4 py-10 pt-10 lg:hidden">
         <Image
           src={gearImage}
           alt="gear"
@@ -60,7 +60,7 @@ const Landing = () => {
       </section>
 
       {/* GROUP IMAGE SECTION */}
-      <section className="relative md:px-4 py-10 md:flex md:justify-center">
+      <section className="relative py-10 md:flex md:justify-center md:px-4">
         <Image
           src={gearImage}
           alt="gear"
@@ -72,10 +72,10 @@ const Landing = () => {
           className="absolute right-1/20 bottom-0 hidden w-[200px] scale-x-[-1] -rotate-10 opacity-70 md:block"
         />
         <Image
-            src={groupPic}
-            alt="group picture"
-            className="relative object-cover md:rounded-3xl md:max-w-8/10 aspect-[1094/527]"
-          />
+          src={groupPic}
+          alt="group picture"
+          className="relative aspect-[1094/527] object-cover md:max-w-8/10 md:rounded-3xl"
+        />
       </section>
     </div>
   );
