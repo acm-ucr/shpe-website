@@ -23,7 +23,7 @@ const Navbar = () => {
     <div>
       {isMobileMenuOpen && (
         <button
-          className="fixed inset-0 z-[80] bg-black/20 lg:hidden"
+          className="fixed inset-0 z-[80] bg-black/20 md:hidden"
           onClick={() => {
             setIsMobileMenuOpen(false);
             setOpenMenu("");
@@ -31,17 +31,17 @@ const Navbar = () => {
         />
       )}
       <div className="font-shpe-univers-condensed relative z-[100] m-5">
-        <div className="bg-shpe-white-100 border-shpe-blue-200 flex h-16 w-full flex-row items-center justify-between justify-self-center rounded-2xl border lg:h-20 lg:rounded-3xl lg:px-5">
-          <div className="flex h-full items-center pr-20 lg:pr-0">
+        <div className="bg-shpe-white-100 border-shpe-blue-200 flex h-16 w-full flex-row items-center justify-between justify-self-center rounded-2xl border md:h-20 md:rounded-3xl md:px-5">
+          <div className="flex h-full items-center pr-20 md:pr-0">
             <Link href="/" aria-label="home" className="flex h-full">
               <Image
-                className="h-full w-auto object-contain py-4 pr-2.5 pl-1.5 lg:-ml-1 lg:py-3.5"
+                className="h-full w-auto object-contain py-4 pr-2.5 pl-1.5 md:-ml-1 md:py-3.5"
                 src={NavbarLogo}
                 alt="SHPE Logo"
               />
             </Link>
 
-            <div className="h-10 w-[1px] bg-black lg:h-14"></div>
+            <div className="h-10 w-[1px] bg-black md:h-14"></div>
 
             <div className=":text-sm flex flex-col px-2.5 py-2 text-black">
               <div> UC </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="ml-44 hidden items-center gap-7 text-lg text-black lg:flex">
+          <div className="hidden items-center gap-7 text-lg text-black md:flex">
             {navbarLinks.map(({ link, name, sub }) => (
               <div key={name} className="relative flex justify-center">
                 {link && !sub ? (
@@ -90,7 +90,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="flex items-center lg:hidden">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="pr-3"
@@ -101,7 +101,7 @@ const Navbar = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="absolute z-[99] flex w-full flex-col gap-2 justify-self-center rounded-3xl border bg-white py-2 text-center text-xl lg:hidden">
+          <div className="absolute z-[99] flex w-full flex-col gap-2 justify-self-center rounded-3xl border bg-white py-2 text-center text-xl md:hidden">
             {openMenu && (
               <button
                 className="absolute inset-0 z-[150] rounded-3xl bg-black/20"
@@ -134,7 +134,7 @@ const Navbar = () => {
                       </button>
 
                       {sub && openMenu === name && (
-                        <div className="bg-shpe-white-100 absolute top-18 left-1/2 z-[200] flex w-30 -translate-x-1/2 flex-col overflow-hidden rounded-md py-2 text-lg shadow-xl lg:hidden">
+                        <div className="bg-shpe-white-100 absolute top-18 left-1/2 z-[200] flex w-30 -translate-x-1/2 flex-col overflow-hidden rounded-md py-2 text-lg shadow-xl md:hidden">
                           {sub.map((item) => (
                             <Link
                               key={item.subname}
