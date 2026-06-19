@@ -7,6 +7,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { navbarLinks } from "@/data/navbarLinks";
 import { Menu, X } from "lucide-react";
+import { DropDown } from "@/animations/Drop";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState("");
@@ -30,7 +32,13 @@ const Navbar = () => {
           }}
         />
       )}
-      <div className="font-shpe-univers-condensed relative z-[100] m-5">
+      <motion.div
+        variants={DropDown}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="font-shpe-univers-condensed relative z-[100] m-5"
+      >
         <div className="bg-shpe-white-100 border-shpe-blue-200 flex h-16 w-full flex-row items-center justify-between justify-self-center rounded-2xl border md:h-20 md:rounded-3xl md:px-5">
           <div className="flex h-full items-center pr-20 md:pr-0">
             <Link href="/" aria-label="home" className="flex h-full">
@@ -156,7 +164,7 @@ const Navbar = () => {
               ))}
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+"use client";
 import discordIcon from "@/public/footer/discord.webp";
 import emailIcon from "@/public/footer/email.webp";
 import facebookIcon from "@/public/footer/facebook.webp";

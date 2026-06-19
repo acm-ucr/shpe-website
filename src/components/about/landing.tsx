@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <div>
+    <div className="relative -mt-35">
       {/* DESKTOP */}
       <section className="from-shpe-blue-200 to-shpe-blue-150 relative hidden overflow-hidden bg-gradient-to-b lg:flex lg:min-h-[570px] lg:flex-col lg:items-center lg:justify-center">
         <Image

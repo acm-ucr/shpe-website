@@ -5,7 +5,6 @@ import Landing from "@/components/about/landing";
 const About = () => {
   return (
     <div>
-      <p>About</p>
       <Landing></Landing>
       <OurPillars />
       <GetInvovled />
