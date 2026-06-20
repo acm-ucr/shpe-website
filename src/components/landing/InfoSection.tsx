@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { FloatRight, FloatUp } from "@/animations/Float";
 
 interface WhoWeAreProps {
-  title: string;
+  title?: string;
   text: string;
   image: StaticImageData;
   alt: string;
@@ -21,23 +21,21 @@ const InfoSection = ({ title, text, image, alt }: WhoWeAreProps) => {
         viewport={viewport}
         className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
       >
-        <Image
-          src={image}
-          alt={alt}
-          className="h-full w-full object-cover shadow-lg"
-        />
+        <Image src={image} alt={alt} className="h-full w-full object-cover" />
       </motion.div>
 
       <div className="flex flex-1 flex-col items-center justify-center p-10 md:p-8">
-        <h1 className="font-shpe-beachwood text-shpe-blue-200 scale-y-140 pb-8 text-center text-5xl font-semibold tracking-tight uppercase">
-          {title}
-        </h1>
+        {title && (
+          <h1 className="font-shpe-beachwood text-shpe-blue-200 scale-y-140 pb-8 text-center text-5xl font-semibold tracking-tight uppercase">
+            {title}
+          </h1>
+        )}
         <motion.p
           variants={FloatUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="font-shpe-univers-condensed text-center text-xl leading-7"
+          className="font-shpe-univers-condensed text-center text-xl leading-7 whitespace-pre-line"
         >
           {text}
         </motion.p>
