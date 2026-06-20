@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "motion/react";
+import { FloatUp } from "@/animations/Float";
 interface OurMissionProps {
   title: string;
   text: string;
@@ -9,9 +12,15 @@ const OurMission = (props: OurMissionProps) => {
       <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-2 scale-y-140 text-3xl font-semibold tracking-tight uppercase">
         {props.title}
       </h2>
-      <p className="font-shpe-univers-condensed max-w-4xl text-sm leading-4 font-semibold">
+      <motion.p
+        variants={FloatUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="font-shpe-univers-condensed max-w-4xl text-sm leading-4 font-semibold"
+      >
         {props.text}
-      </p>
+      </motion.p>
     </div>
   );
 };

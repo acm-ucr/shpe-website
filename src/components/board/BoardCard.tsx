@@ -16,6 +16,7 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       variants={FloatUp}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }}
       className="bg-shpe-blue-200 text-shpe-white-100 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center"
     >
       <div className="bg-shpe-white-100 relative mb-2 aspect-[5/6] w-full overflow-hidden rounded-3xl">

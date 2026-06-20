@@ -35,7 +35,7 @@ const Navbar = () => {
       <motion.div
         variants={DropDown}
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         viewport={{ once: true }}
         className="font-shpe-univers-condensed relative z-[100] m-5"
       >
