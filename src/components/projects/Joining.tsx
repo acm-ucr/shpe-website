@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Checklist from "@/public/Checklist.webp";
 import Cursor from "@/public/icons/Cursor.webp";
-import SBConstruction from "@/public/SBConstruction.webp";
+import SBConstruction from "@/public/home/RecentEvents/SBConstruction.webp";
 import SBQRCode from "@/public/SBQRCode.webp";
 import Gear from "@/public/icons/gear.webp";
 
