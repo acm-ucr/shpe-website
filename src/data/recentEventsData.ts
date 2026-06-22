@@ -1,6 +1,6 @@
-import election_night from "@/public/home/RecentEvents/election_night.png";
+import election_night from "@/public/home/RecentEvents/election_night.webp";
 import solar_boat from "@/public/home/RecentEvents/SBConstruction.webp";
-import shpetinas from "@/public/home/RecentEvents/shpetinas.png";
+import shpetinas from "@/public/home/RecentEvents/shpetinas.webp";
 
 const RecentEventsData = [
   {
