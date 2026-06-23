@@ -1,4 +1,8 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "motion/react";
+import { FloatUp } from "@/animations/Float";
+import LinkedInIcon from "@/public/LinkedIn.svg";
 
 interface BoardCardProps {
   name: string;
@@ -9,7 +13,13 @@ interface BoardCardProps {
 
 const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
   return (
-    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center">
+    <motion.div
+      variants={FloatUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-shpe-blue-200 text-shpe-white-100 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center"
+    >
       <div className="bg-shpe-white-100 relative mb-2 aspect-[5/6] w-full overflow-hidden rounded-3xl">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
@@ -18,9 +28,9 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       <div className="font-shpe-univers-condensed text-lg">{position}</div>
 
       <a href={linkedin} target="_blank" rel="noreferrer">
-        <Image src="/LinkedIn.svg" alt="LinkedIn" width={48} height={48} />
+        <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
       </a>
-    </div>
+    </motion.div>
   );
 };
 

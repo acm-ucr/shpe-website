@@ -1,7 +1,7 @@
 import "./globals.css";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/board/footer";
+import Footer from "@/components/ui/footer";
 
 export const metadata = {
   title: "Society of Hispanic Professional Engineers",
