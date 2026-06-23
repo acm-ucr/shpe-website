@@ -10,12 +10,12 @@ const GetInvolved = () => {
       <Image
         src={MagnifyingGlass}
         alt="magnifying glass"
-        className="absolute top-0 left-0 w-20"
+        className="absolute top-0 left-0 w-30"
       />
-      <div className="font-shpe-beachwood text-5xl font-semibold text-black">
+      <div className="font-shpe-beachwood relative z-10 text-center text-5xl font-semibold text-black">
         HOW TO GET INVOLVED
       </div>
-      <div className="grid w-3/5 grid-cols-2 gap-8">
+      <div className="relative z-10 flex w-3/5 flex-col gap-8 md:grid md:grid-cols-2">
         {GetInvolvedData.map(({ image, logo, title, text }, index) => (
           <div key={index} className="relative">
             <Popup
@@ -25,7 +25,7 @@ const GetInvolved = () => {
               popupComponent={
                 <GetInvolvedCard image={image} title={title} text={text} />
               }
-              position="fixed w-1/3 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+              position="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
             />
           </div>
         ))}

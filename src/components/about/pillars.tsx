@@ -4,18 +4,18 @@ import { PILLARS } from "@/data/pillars";
 
 export default function OurPillars() {
   return (
-    <section className="bg-shpe-white-100 flex flex-col items-center py-20">
-      <h2 className="font-shpe-beachwood mb-16 text-6xl font-bold tracking-widest text-black uppercase">
+    <div className="bg-shpe-white-100 relative flex w-full flex-col items-center py-10">
+      <h2 className="font-shpe-beachwood mb-10 text-6xl font-bold tracking-widest text-black uppercase">
         Our Pillars
       </h2>
 
-      <div className="flex justify-center gap-12 px-4">
+      <div className="flex w-full flex-row flex-wrap justify-center gap-10 px-4">
         {PILLARS.map(({ title, color, image, content }, index) => (
           <Popup
             key={index}
             clickableComponent={
               <div
-                className={` ${color} flex h-fit w-[360px] flex-none flex-col rounded-[2.5rem] px-6 pt-6 pb-6`}
+                className={` ${color} flex w-[360px] flex-none flex-col rounded-[2.5rem] px-6 pt-6 pb-6`}
               >
                 <div className="relative mx-auto h-[280px] w-[312px] flex-none overflow-hidden rounded-[1.75rem]">
                   <Image
@@ -44,6 +44,6 @@ export default function OurPillars() {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

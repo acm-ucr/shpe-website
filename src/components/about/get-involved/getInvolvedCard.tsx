@@ -17,13 +17,11 @@ const GetInvolvedCard = ({
   return (
     <div className="relative">
       {text ? (
-        <div className="bg-shpe-blue-200 min-h-[50vh] w-full rounded-2xl">
-          <div className="relative flex flex-col items-center px-8 text-center text-white">
-            <div className="font-shpe-beachwood py-8 text-4xl font-semibold">
-              {title}
-            </div>
-            <p className="font-shpe-univers-condensed text-xl">{text}</p>
+        <div className="bg-shpe-blue-200 relative flex min-h-[50vh] w-full flex-col items-center rounded-2xl px-8 text-center text-white">
+          <div className="font-shpe-beachwood py-8 text-4xl font-semibold">
+            {title}
           </div>
+          <p className="font-shpe-univers-condensed text-xl">{text}</p>
         </div>
       ) : (
         <div>
@@ -35,7 +33,7 @@ const GetInvolvedCard = ({
               {logo ? (
                 <Image src={logo} alt={title} />
               ) : (
-                <div className="font-shpe-beachwood text-center text-5xl font-semibold text-white">
+                <div className="font-shpe-beachwood text-center text-4xl font-semibold text-white md:text-2xl lg:text-4xl">
                   {title}
                 </div>
               )}
