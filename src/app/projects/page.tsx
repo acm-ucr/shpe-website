@@ -2,7 +2,7 @@ import Boat from "@/public/icons/Sail Boat.webp";
 import TitleBanner from "@/components/Title";
 import Joining from "@/components/projects/Joining";
 import InfoSection from "@/components/landing/InfoSection";
-import SolarBoat from "@/public/projects/solar_boat.png";
+import SolarBoat from "@/public/projects/solar_boat.webp";
 
 const Projects = () => {
   return (
