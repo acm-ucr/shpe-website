@@ -24,10 +24,9 @@ const Home = () => {
         text="SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development."
       />
       <Events></Events>
-      <EventsList
-        title="Recent Events"
-        eventsData={RecentEventsData}
-      ></EventsList>
+      <div className="bg-shpe-blue-050">
+        <EventsList title="Recent Events" eventsData={RecentEventsData} />
+      </div>
     </div>
   );
 };

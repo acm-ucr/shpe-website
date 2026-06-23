@@ -30,7 +30,7 @@ const EventsList = ({ title, eventsData }: EventsList) => {
   const currentItem = eventsData[currentIndex];
   const viewport = { once: true, amount: 0.3 };
   return (
-    <div className="bg-shpe-blue-050 w-full py-8">
+    <div className="w-full py-8">
       <h2 className="font-shpe-beachwood text-shpe-blue-200 w-full scale-y-120 pb-8 text-center text-5xl font-semibold tracking-tight uppercase">
         {title}
       </h2>
