@@ -2,6 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 import { FloatUp } from "@/animations/Float";
+import LinkedInIcon from "@/public/LinkedIn.svg";
 
 interface BoardCardProps {
   name: string;
@@ -27,7 +28,7 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       <div className="font-shpe-univers-condensed text-lg">{position}</div>
 
       <a href={linkedin} target="_blank" rel="noreferrer">
-        <Image src="/LinkedIn.svg" alt="LinkedIn" width={48} height={48} />
+        <Image src={LinkedInIcon} alt="LinkedIn" width={48} height={48} />
       </a>
     </motion.div>
   );

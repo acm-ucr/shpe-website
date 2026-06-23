@@ -2,35 +2,37 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import RecentEventsData from "@/data/recentEventsData";
-import RecentEventCard from "@/components/landing/RecentEvents/recentEventCard";
+import RecentEventCard, {
+  CardInfo,
+} from "@/components/landing/RecentEvents/recentEventCard";
 import PreviousPageIcon from "@/public/prev_page.svg";
 import NextPageIcon from "@/public/next_page.svg";
 import { FloatUp } from "@/animations/Float";
 import { FadeIn } from "@/animations/Fade";
 
-const RecentEvents = () => {
+interface EventsList {
+  title: string;
+  eventsData: CardInfo[];
+}
+
+const EventsList = ({ title, eventsData }: EventsList) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? RecentEventsData.length - 1 : prev - 1,
-    );
+    setCurrentIndex((prev) => (prev === 0 ? eventsData.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev === RecentEventsData.length - 1 ? 0 : prev + 1,
-    );
+    setCurrentIndex((prev) => (prev === eventsData.length - 1 ? 0 : prev + 1));
   };
 
-  if (!RecentEventsData || RecentEventsData.length === 0) return null;
+  if (!eventsData || eventsData.length === 0) return null;
 
-  const currentItem = RecentEventsData[currentIndex];
+  const currentItem = eventsData[currentIndex];
   const viewport = { once: true, amount: 0.3 };
   return (
     <div className="bg-shpe-blue-050 w-full py-8">
       <h2 className="font-shpe-beachwood text-shpe-blue-200 w-full scale-y-120 pb-8 text-center text-5xl font-semibold tracking-tight uppercase">
-        Recent Events
+        {title}
       </h2>
       <motion.div
         variants={FloatUp}
@@ -38,7 +40,7 @@ const RecentEvents = () => {
         whileInView="visible"
         className="mx-10 hidden grid-cols-3 gap-10 pb-5 md:grid"
       >
-        {RecentEventsData.map(({ image, alt, info }, index) => (
+        {eventsData.map(({ image, alt, info }, index) => (
           <RecentEventCard image={image} alt={alt} info={info} key={index} />
         ))}
       </motion.div>
@@ -72,4 +74,4 @@ const RecentEvents = () => {
   );
 };
 
-export default RecentEvents;
+export default EventsList;

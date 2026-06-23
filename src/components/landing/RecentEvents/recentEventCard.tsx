@@ -15,8 +15,9 @@ const RecentEventCard = ({ image, alt, info }: CardInfo) => {
         alt={alt}
         className="aspect-3/4 rounded-4xl object-cover transition-opacity duration-500 ease-in-out"
       />
-      <p className="hidden p-3 text-center lg:block">{info}</p>
+      {info && <p className="hidden p-3 text-center lg:block">{info}</p>}
     </div>
   );
 };
 export default RecentEventCard;
+export type { CardInfo };
