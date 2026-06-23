@@ -15,7 +15,7 @@ const RecentEventCard = ({ image, alt, info }: CardInfo) => {
         alt={alt}
         className="aspect-3/4 rounded-4xl object-cover transition-opacity duration-500 ease-in-out"
       />
-      {info && <p className="p-3 text-center">{info}</p>}
+      <p className="hidden p-3 text-center lg:block">{info}</p>
     </div>
   );
 };
