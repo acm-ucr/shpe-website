@@ -1,3 +1,4 @@
+"use client";
 import discordIcon from "@/public/footer/discord.webp";
 import emailIcon from "@/public/footer/email.webp";
 import facebookIcon from "@/public/footer/facebook.webp";
@@ -12,7 +13,7 @@ const iconSize = "h-[50px] w-[50px]";
 
 const Footer = () => {
   return (
-    <div className="from-shpe-blue-200 to-shpe-blue-150 mt-5 flex w-full flex-col items-center justify-center bg-gradient-to-r px-[20px] py-[15px] md:flex-row md:justify-between md:px-[40px] md:py-[20px]">
+    <div className="from-shpe-blue-200 to-shpe-blue-150 flex w-full flex-col items-center justify-center bg-gradient-to-r px-[20px] py-[15px] md:flex-row md:justify-between md:px-[40px] md:py-[20px]">
       <Image
         src={shpeFooterLogo}
         alt="FooterLogo"

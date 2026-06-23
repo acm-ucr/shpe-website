@@ -12,7 +12,7 @@ const Board = () => {
         description="Click each board member to learn more about them!"
       />
       <div className="mt-5 flex w-full justify-center px-6">
-        <div className="flex w-full max-w-6xl flex-wrap justify-center gap-x-40 gap-y-10">
+        <div className="flex w-full max-w-6xl flex-wrap justify-center gap-15 p-10">
           {boardData.map((member, index) => (
             <Popup
               key={index}

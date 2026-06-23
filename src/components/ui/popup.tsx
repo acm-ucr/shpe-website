@@ -29,7 +29,7 @@ const Popup = ({
         className={`${overlayColor === undefined ? "bg-white/0" : overlayColor}`}
       >
         <DialogContent
-          className={`${position === undefined ? "fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" : position}`}
+          className={`${position === undefined ? "fixed top-[50%] left-[50%] w-full translate-x-[-50%] translate-y-[-50%] md:w-3/4" : position}`}
         >
           <DialogTitle />
           {popupComponent}

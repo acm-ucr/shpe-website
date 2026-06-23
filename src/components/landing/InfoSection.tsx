@@ -1,31 +1,47 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "motion/react";
+import { FloatRight, FloatUp } from "@/animations/Float";
 
 interface WhoWeAreProps {
-  title: string;
+  title?: string;
   text: string;
   image: StaticImageData;
   alt: string;
 }
 
 const InfoSection = ({ title, text, image, alt }: WhoWeAreProps) => {
+  const viewport = { once: true };
   return (
-    <div className="flex w-full items-start justify-between">
-      <div className="flex w-1/2 justify-start">
-        <Image
-          src={image}
-          alt={alt}
-          className="h-auto max-w-full object-contain shadow-lg"
-        />
-      </div>
-      <div className="flex w-1/2 flex-col items-center px-16">
-        <h1 className="font-shpe-beachwood text-shpe-blue-200 mt-15 mb-9 scale-y-140 text-center text-5xl font-semibold tracking-tight uppercase">
-          {title}
-        </h1>
-        <p className="font-shpe-univers-condensed px-10 text-center text-xl leading-7">
+    <div className="flex w-full flex-col items-stretch justify-between gap-8 overflow-hidden md:flex-row md:gap-4">
+      <motion.div
+        variants={FloatRight}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
+      >
+        <Image src={image} alt={alt} className="h-full w-full object-cover" />
+      </motion.div>
+
+      <div className="flex flex-1 flex-col items-center justify-center p-10 md:p-8">
+        {title && (
+          <h1 className="font-shpe-beachwood text-shpe-blue-200 scale-y-140 pb-8 text-center text-5xl font-semibold tracking-tight uppercase">
+            {title}
+          </h1>
+        )}
+        <motion.p
+          variants={FloatUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="font-shpe-univers-condensed text-center text-xl leading-7 whitespace-pre-line"
+        >
           {text}
-        </p>
+        </motion.p>
       </div>
     </div>
   );
 };
+
 export default InfoSection;
