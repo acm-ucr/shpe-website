@@ -8,8 +8,8 @@ interface OurMissionProps {
 
 const OurMission = (props: OurMissionProps) => {
   return (
-    <div className="bg-shpe-orange-500/50 flex w-full flex-col items-center px-20 py-7 text-center">
-      <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-2 scale-y-140 text-3xl font-semibold tracking-tight uppercase">
+    <div className="bg-shpe-orange-500/50 flex w-full flex-col items-center py-7 text-center">
+      <h2 className="font-shpe-beachwood text-shpe-blue-200 mb-2 scale-y-120 text-3xl font-semibold tracking-tight uppercase">
         {props.title}
       </h2>
       <motion.p
@@ -17,7 +17,7 @@ const OurMission = (props: OurMissionProps) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="font-shpe-univers-condensed max-w-4xl text-sm leading-4 font-semibold"
+        className="font-shpe-univers-condensed px-10 text-xl md:max-w-7/10"
       >
         {props.text}
       </motion.p>
