@@ -17,7 +17,7 @@ const GetInvolvedCard = ({
   return (
     <div className="relative">
       {text ? (
-        <div className="bg-shpe-blue-200 min-h-[50vh] rounded-2xl">
+        <div className="bg-shpe-blue-200 min-h-[50vh] w-full rounded-2xl">
           <div className="relative flex flex-col items-center px-8 text-center text-white">
             <div className="font-shpe-beachwood py-8 text-4xl font-semibold">
               {title}
