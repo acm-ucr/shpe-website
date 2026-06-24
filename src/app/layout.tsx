@@ -4,8 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/ui/footer";
 
 export const metadata = {
-  title: "Society of Hispanic Professional Engineers",
-  description: "SHPE @ UCR",
+  title: "SHPE @ UCR",
+  description:
+    "The official University of California, Riverside (UCR) chapter of the Society of Hispanic Professional Engineers (SHPE). Join our STEM community today!",
 };
 
 type LayoutProps = {

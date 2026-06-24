@@ -3,6 +3,12 @@ import { alumni } from "@/data/alumniData";
 import GradCap from "@/public/icons/Graduation Cap.webp";
 import TitleBanner from "@/components/Title";
 
+export const metadata = {
+  title: "Alumni | SHPE @ UCR",
+  description:
+    "Meet the alumni of the Society of Hispanic Professional Engineers at UC Riverside. Explore a growing network of successful STEM and tech professionals.",
+};
+
 const AlumniPage = () => {
   return (
     <div className="flex flex-col justify-center">
