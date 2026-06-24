@@ -7,8 +7,8 @@ import wrenchIcon from "@/public/icons/wrench.webp";
 export default function OurPillars() {
   return (
     <div className="bg-shpe-white-100 relative flex w-full flex-col items-center py-10 md:pb-30">
-      <h2 className="font-shpe-beachwood mb-10 text-center text-6xl font-bold tracking-widest text-black uppercase">
-        Our Pillars
+      <h2 className="text-shpe-blue-200 font-shpe-beachwood mb-10 scale-y-120 text-center text-5xl font-semibold uppercase">
+        OUR PILLARS
       </h2>
 
       <div className="relative z-10 flex w-full flex-row flex-wrap justify-center gap-10 px-4">
@@ -38,7 +38,6 @@ export default function OurPillars() {
                 <div className="font-shpe-univers text-md">{content}</div>
               </div>
             }
-            overlayColor="bg-shpe-blue-200/40"
           />
         ))}
       </div>

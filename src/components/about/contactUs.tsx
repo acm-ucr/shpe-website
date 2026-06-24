@@ -11,10 +11,6 @@ import { StaticImageData } from "next/image";
 import Link from "next/link";
 
 // made these into variables for easier changes if needed/wanted
-const iconSize = "md:h-[88px] md:w-[88px] h-[51px] w-[51px]";
-const circleStyle =
-  "flex flex-col items-center justify-center bg-shpe-orange-500 rounded-full w-[82px] h-[82px] md:h-[140px] md:w-[140px]";
-const lineStyle = "h-[3px] w-[45px] bg-shpe-orange-500 mx-[20px] md:w-[82px]";
 const subHeaderStyle =
   "font-shpe-univers-condensed text-shpe-blue-200 text-center text-3xl";
 const margins = "flex flex-col items-center gap-[20px] mt-[40px]";
@@ -43,9 +39,14 @@ const ContactCircle = ({
         ? "_blank"
         : undefined
     }
+    className="transition-transform hover:scale-110"
   >
-    <div className={circleStyle}>
-      <Image src={icon} alt={alt} className={`${iconSize}`} />
+    <div className="bg-shpe-orange-500 flex h-[82px] w-[82px] flex-col items-center justify-center rounded-full md:h-[140px] md:w-[140px]">
+      <Image
+        src={icon}
+        alt={alt}
+        className="h-[51px] w-[51px] md:h-[88px] md:w-[88px]"
+      />
       <div
         className={`text-center ${textSize} leading-none text-white ${tweak}`}
       >
@@ -55,7 +56,9 @@ const ContactCircle = ({
   </Link>
 );
 
-const Divider = () => <div className={lineStyle} />;
+const Divider = () => (
+  <div className="bg-shpe-orange-500 mx-[20px] h-[3px] w-[45px] md:w-[82px]" />
+);
 
 // data for reusable components
 const contactQuestions = [
@@ -101,7 +104,7 @@ const socialLinks = [
 
 const ContactUs = () => {
   return (
-    <div className="bg-shpe-white-100 relative overflow-hidden py-[40px] md:py-[240px]">
+    <div className="bg-shpe-white-100 relative overflow-hidden py-10">
       {/* Gears */}
       <Image
         src={gearImage}
