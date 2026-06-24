@@ -63,7 +63,7 @@ const Events = () => {
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
-        className="flex flex-col items-center md:hidden"
+        className="flex min-h-[448px] flex-col items-center md:hidden"
       >
         <div className="relative flex w-72 flex-col items-center">
           <button
