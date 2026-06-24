@@ -4,6 +4,12 @@ import { boardData } from "@/data/boardData";
 import Popup from "@/components/ui/popup";
 import BoardOverlay from "@/components/board/BoardOverlay";
 
+export const metadata = {
+  title: "Current Board | SHPE @ UCR",
+  description:
+    "Get to know the current board of SHPE @ UCR! Meet the student leaders driving the Society of Hispanic Professional Engineers at UC Riverside.",
+};
+
 const Board = () => {
   return (
     <div className="w-full items-center justify-center">
