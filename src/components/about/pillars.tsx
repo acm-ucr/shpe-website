@@ -17,7 +17,7 @@ export default function OurPillars() {
             key={index}
             clickableComponent={
               <div
-                className={` ${color} flex w-50 flex-none flex-col rounded-[2.5rem] px-6 pt-6 pb-6 md:w-100`}
+                className={` ${color} flex w-50 flex-none flex-col rounded-[2.5rem] px-6 pt-6 pb-6 transition-transform hover:scale-110 md:w-100`}
               >
                 <div className="relative mx-auto w-full flex-none overflow-hidden rounded-[1.75rem]">
                   <Image
@@ -34,10 +34,8 @@ export default function OurPillars() {
               </div>
             }
             popupComponent={
-              <div
-                className={`${color} text-shpe-white-100 max-w-5xl rounded-3xl p-10`}
-              >
-                <div className="font-shpe-univers text-lg">{content}</div>
+              <div className={`${color} text-shpe-white-100 rounded-3xl p-10`}>
+                <div className="font-shpe-univers text-md">{content}</div>
               </div>
             }
             overlayColor="bg-shpe-blue-200/40"

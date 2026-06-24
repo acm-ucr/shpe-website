@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Popup from "@/components/ui/popup";
-import GetInvolvedCard from "./getInvolvedCard";
+import GetInvolvedCard from "@/components/about/get-involved/getInvolvedCard";
+import GetInvolvedPopup from "@/components/about/get-involved/getInvolvedPopup";
 import GetInvolvedData from "@/data/getInvovled";
 import MagnifyingGlass from "@/public/about/magnifying glass.webp";
 
@@ -22,10 +23,7 @@ const GetInvolved = () => {
               clickableComponent={
                 <GetInvolvedCard image={image} logo={logo} title={title} />
               }
-              popupComponent={
-                <GetInvolvedCard image={image} title={title} text={text} />
-              }
-              position="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+              popupComponent={<GetInvolvedPopup title={title} text={text} />}
             />
           </div>
         ))}
