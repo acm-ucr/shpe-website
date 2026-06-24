@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { FaSquareXmark } from "react-icons/fa6";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 import { cn } from "@/lib/utils";
 
@@ -38,14 +38,15 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 z-50 w-fit gap-4 p-2 duration-200",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 duration-1000",
+        "z-50 w-fit gap-4 p-2",
         className,
       )}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
-        <FaSquareXmark className="text-xl hover:scale-110" />
+      <DialogPrimitive.Close className="absolute top-4 right-4 rounded-full border-none opacity-70 transition-all hover:scale-120 hover:opacity-100 focus:ring-0 focus:outline-none disabled:pointer-events-none">
+        <IoIosCloseCircleOutline className="text-shpe-white-100 h-10 w-10" />
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>

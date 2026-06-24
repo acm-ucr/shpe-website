@@ -22,7 +22,7 @@ const Popup = ({
 }: PopupProps) => {
   return (
     <Dialog>
-      <DialogTrigger className="relative w-fit cursor-pointer" asChild>
+      <DialogTrigger className="relative cursor-pointer" asChild>
         {clickableComponent}
       </DialogTrigger>
       <DialogOverlay
