@@ -49,16 +49,21 @@ const EventsList = ({ title, eventsData }: EventsList) => {
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
-        className="flex flex-row justify-center md:hidden"
+        className="flex flex-row items-center justify-center md:hidden"
       >
         <button onClick={handlePrev} className="w-fit p-3">
-          <Image className="w-40" src={PreviousPageIcon} alt="Previous" />
+          <Image
+            className="w-15 flex-0"
+            src={PreviousPageIcon}
+            alt="Previous"
+          />
         </button>
         <motion.div
           variants={FadeIn}
           key={currentIndex}
           initial="hidden"
           animate="visible"
+          className="flex-1"
         >
           <RecentEventCard
             image={currentItem.image}
@@ -67,7 +72,7 @@ const EventsList = ({ title, eventsData }: EventsList) => {
           />
         </motion.div>
         <button onClick={handleNext} className="w-fit p-3">
-          <Image className="w-40" src={NextPageIcon} alt="Next" />
+          <Image className="w-15 flex-0" src={NextPageIcon} alt="Next" />
         </button>
       </motion.div>
     </div>
