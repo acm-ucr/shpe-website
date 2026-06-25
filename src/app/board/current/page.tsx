@@ -18,10 +18,7 @@ const Board = () => {
               <Popup
                 key={index}
                 clickableComponent={
-                  <div
-                    
-                    className="w-full max-w-65"
-                  >
+                  <div className="w-full max-w-65">
                     <BoardCard
                       key={index}
                       name={name}

@@ -19,7 +19,8 @@ const BoardCard = ({ name, image, position, linkedin }: BoardCardProps) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
-      className="bg-shpe-blue-200 text-shpe-white-100 z-10 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center">
+      className="bg-shpe-blue-200 text-shpe-white-100 z-10 flex w-full max-w-65 flex-col items-center rounded-4xl p-4 pb-3 text-center"
+    >
       <div className="bg-shpe-white-100 relative mb-2 aspect-[5/6] w-full overflow-hidden rounded-3xl">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
