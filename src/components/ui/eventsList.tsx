@@ -51,9 +51,12 @@ const EventsList = ({ title, eventsData }: EventsList) => {
         viewport={viewport}
         className="flex flex-row items-center justify-center md:hidden"
       >
-        <button onClick={handlePrev} className="w-fit p-3">
+        <button
+          onClick={handlePrev}
+          className="w-fit p-3 opacity-70 transition-all hover:scale-120 hover:opacity-100"
+        >
           <Image
-            className="w-15 flex-0"
+            className="w-10 flex-0"
             src={PreviousPageIcon}
             alt="Previous"
           />
@@ -71,8 +74,11 @@ const EventsList = ({ title, eventsData }: EventsList) => {
             info={currentItem.info}
           />
         </motion.div>
-        <button onClick={handleNext} className="w-fit p-3">
-          <Image className="w-15 flex-0" src={NextPageIcon} alt="Next" />
+        <button
+          onClick={handleNext}
+          className="w-fit p-3 opacity-70 transition-all hover:scale-120 hover:opacity-100"
+        >
+          <Image className="w-10 flex-0" src={NextPageIcon} alt="Next" />
         </button>
       </motion.div>
     </div>
