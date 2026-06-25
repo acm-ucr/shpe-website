@@ -25,7 +25,7 @@ const Popup = ({
       </DialogTrigger>
       <DialogOverlay className="bg-shpe-blue-200/40">
         <DialogContent
-          className={`${position === undefined ? "fixed top-[50%] left-[50%] w-full translate-x-[-50%] translate-y-[-50%] md:w-3/4" : position}`}
+          className={`${position === undefined ? "fixed top-[50%] left-[50%] w-full translate-x-[-50%] translate-y-[-50%] md:w-fit" : position}`}
         >
           <DialogTitle />
           {popupComponent}
