@@ -18,31 +18,35 @@ const Board = () => {
         description="Click each board member to learn more about them!"
       />
       <div className="mt-5 flex w-full justify-center px-6">
-        <div className="flex w-full max-w-6xl flex-wrap justify-center gap-15 p-10">
-          {boardData.map((member, index) => (
-            <Popup
-              key={index}
-              clickableComponent={
-                <BoardCard
-                  //key={index}
-                  name={member.name}
-                  image={member.image}
-                  position={member.position}
-                  linkedin={member.linkedin}
-                />
-              }
-              popupComponent={
-                <BoardOverlay
-                  name={member.name}
-                  image={member.image}
-                  position={member.position}
-                  linkedin={member.linkedin}
-                  title={member.title}
-                  quote={member.quote}
-                />
-              }
-            />
-          ))}
+        <div className="relative flex w-full max-w-6xl flex-wrap justify-center gap-15 p-10">
+          {boardData.map(
+            ({ name, image, position, linkedin, title, quote }, index) => (
+              <Popup
+                key={index}
+                clickableComponent={
+                  <div className="w-full max-w-65">
+                    <BoardCard
+                      key={index}
+                      name={name}
+                      image={image}
+                      position={position}
+                      linkedin={linkedin}
+                    />
+                  </div>
+                }
+                popupComponent={
+                  <BoardOverlay
+                    name={name}
+                    image={image}
+                    position={position}
+                    linkedin={linkedin}
+                    title={title}
+                    quote={quote}
+                  />
+                }
+              />
+            ),
+          )}
         </div>
       </div>
     </div>

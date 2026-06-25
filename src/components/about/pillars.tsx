@@ -34,7 +34,9 @@ export default function OurPillars() {
               </div>
             }
             popupComponent={
-              <div className={`${color} text-shpe-white-100 rounded-3xl p-10`}>
+              <div
+                className={`${color} text-shpe-white-100 rounded-3xl p-10 md:w-160`}
+              >
                 <div className="font-shpe-univers text-md">{content}</div>
               </div>
             }
