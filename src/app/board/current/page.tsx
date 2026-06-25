@@ -1,11 +1,8 @@
-"use client";
 import TitleBanner from "@/components/Title";
 import BoardCard from "@/components/board/BoardCard";
 import { boardData } from "@/data/boardData";
 import Popup from "@/components/ui/popup";
 import BoardOverlay from "@/components/board/BoardOverlay";
-import { motion } from "motion/react";
-import { FloatUp } from "@/animations/Float";
 
 const Board = () => {
   return (
@@ -21,11 +18,8 @@ const Board = () => {
               <Popup
                 key={index}
                 clickableComponent={
-                  <motion.div
-                    variants={FloatUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.3 }}
+                  <div
+                    
                     className="w-full max-w-65"
                   >
                     <BoardCard
@@ -35,7 +29,7 @@ const Board = () => {
                       position={position}
                       linkedin={linkedin}
                     />
-                  </motion.div>
+                  </div>
                 }
                 popupComponent={
                   <BoardOverlay
