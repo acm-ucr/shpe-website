@@ -68,7 +68,7 @@ const Events = () => {
         <div className="relative flex w-72 flex-col items-center">
           <button
             onClick={handlePrev}
-            className="absolute top-[8.5rem] -left-12 z-10 -translate-y-1/2 focus:outline-none"
+            className="absolute top-[8.5rem] -left-12 z-10 -translate-y-1/2 opacity-70 transition-all hover:scale-120 hover:opacity-100 focus:outline-none"
             aria-label="Previous event"
           >
             <Image src={PrevIcon} alt="Previous" width={40} height={40} />
@@ -93,7 +93,7 @@ const Events = () => {
           </motion.div>
           <button
             onClick={handleNext}
-            className="absolute top-[8.5rem] -right-12 z-10 -translate-y-1/2 focus:outline-none"
+            className="absolute top-[8.5rem] -right-12 z-10 -translate-y-1/2 opacity-70 transition-all hover:scale-120 hover:opacity-100 focus:outline-none"
             aria-label="Next event"
           >
             <Image src={NextIcon} alt="Next" width={40} height={40} />
