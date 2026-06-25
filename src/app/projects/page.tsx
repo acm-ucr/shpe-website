@@ -4,6 +4,12 @@ import Joining from "@/components/projects/Joining";
 import InfoSection from "@/components/landing/InfoSection";
 import SolarBoat from "@/public/projects/solar_boat.webp";
 
+export const metadata = {
+  title: "Projects | SHPE @ UCR",
+  description:
+    "Learn about SHPE @ UCR's hands-on engineering and tech projects, featuring the Solar Boat Project. See how UC Riverside students can apply.",
+};
+
 const Projects = () => {
   return (
     <div>
