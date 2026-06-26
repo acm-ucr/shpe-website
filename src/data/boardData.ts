@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import imagePlaceholder from "@/public/imagePlaceholder.svg";
 
 export interface BoardMember {
   name: string;
@@ -12,7 +13,7 @@ export interface BoardMember {
 export const boardData: BoardMember[] = [
   {
     name: "NAME",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Advisor",
     linkedin: "https://linkedin.com/in/username",
     title: "Description",
@@ -20,7 +21,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Laura Canon",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "President",
     linkedin: "https://linkedin.com/in/username",
     title: "4th Year Computer Science with Business Administration",
@@ -29,7 +30,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Naima Cano",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Vice President",
     linkedin: "https://linkedin.com/in/username",
     title: "3rd Year Computer Science with Business Administration",
@@ -38,7 +39,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Wendy Vargas",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Secretary",
     linkedin: "https://linkedin.com/in/username",
     title: "3rd Year Computer Science",
@@ -47,7 +48,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Juan Ascencio-Martinez",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Treasurer",
     linkedin: "https://linkedin.com/in/username",
     title: "3rd year Mechanical Engineer",
@@ -56,7 +57,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Joshua Rojas",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Solar Boat Lead",
     linkedin: "https://linkedin.com/in/username",
     title: "4th year Mechanical Engineer",
@@ -65,7 +66,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Isabel Brambila",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "SHPEtinas Director",
     linkedin: "https://linkedin.com/in/username",
     title: "4th Year Bioengineer",
@@ -74,7 +75,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Sirajum Munira",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Professional Dev. Co-Director",
     linkedin: "https://linkedin.com/in/username",
     title: "4th Year Chemical Engineer",
@@ -83,7 +84,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Frankie Puentes",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Professional Dev. Co-Director",
     linkedin: "https://linkedin.com/in/username",
     title: "2nd Year Mechanical Engineer",
@@ -91,7 +92,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Giselle Avila",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Outreach Director",
     linkedin: "https://linkedin.com/in/username",
     title: "3rd year Environmental Engineer",
@@ -100,7 +101,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Mia Olea",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Marketing Manager",
     linkedin: "https://linkedin.com/in/username",
     title: "2nd year Environmental Engineer",
@@ -109,7 +110,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Samantha Morales",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Social & Mentorship Chair",
     linkedin: "https://linkedin.com/in/username",
     title: "2nd year Mechanical Engineer",
@@ -118,7 +119,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Janelle Avila",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Fundraising Chair",
     linkedin: "https://linkedin.com/in/username",
     title: "2nd year Environmental Engineer",
@@ -127,7 +128,7 @@ export const boardData: BoardMember[] = [
   },
   {
     name: "Diego Alvarez",
-    image: "/imagePlaceholder.svg",
+    image: imagePlaceholder,
     position: "Recruitment Chairr",
     linkedin: "https://linkedin.com/in/username",
     title: "4th year Chemical Engineer w/ a concentration in Nanotechnology",

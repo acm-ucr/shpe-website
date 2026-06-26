@@ -8,9 +8,10 @@ interface WhoWeAreProps {
   text: string;
   image: StaticImageData;
   alt: string;
+  object?: string;
 }
 
-const InfoSection = ({ title, text, image, alt }: WhoWeAreProps) => {
+const InfoSection = ({ title, text, image, alt, object }: WhoWeAreProps) => {
   const viewport = { once: true };
   return (
     <div className="flex w-full flex-col items-stretch justify-between gap-8 overflow-hidden md:flex-row md:gap-4">
@@ -21,7 +22,11 @@ const InfoSection = ({ title, text, image, alt }: WhoWeAreProps) => {
         viewport={viewport}
         className="flex min-h-0 min-w-0 flex-1 items-center justify-center"
       >
-        <Image src={image} alt={alt} className="h-full w-full object-cover" />
+        <Image
+          src={image}
+          alt={alt}
+          className={`h-full w-full ${object ? object : "object-cover"} `}
+        />
       </motion.div>
 
       <div className="flex flex-1 flex-col items-center justify-center p-10 md:p-8">

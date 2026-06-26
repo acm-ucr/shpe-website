@@ -3,6 +3,7 @@ import TitleBanner from "@/components/Title";
 import Joining from "@/components/projects/Joining";
 import InfoSection from "@/components/landing/InfoSection";
 import SolarBoat from "@/public/projects/solar_boat.webp";
+import PastProjects from "@/components/projects/PastProjects";
 
 export const metadata = {
   title: "Projects | SHPE @ UCR",
@@ -20,8 +21,10 @@ const Projects = () => {
         }
         image={SolarBoat}
         alt="Solar Boat Logo"
+        object="object-contain"
       />
       <Joining />
+      <PastProjects />
     </div>
   );
 };
