@@ -1,15 +1,27 @@
+"use client";
 import Popup from "@/components/ui/popup";
 import Image from "next/image";
 import { PILLARS } from "@/data/pillars";
 import gearIcon from "@/public/icons/gear.webp";
 import wrenchIcon from "@/public/icons/wrench.webp";
+import { FloatLeft, FloatRight } from "@/animations/Float";
+import { FadeIn } from "@/animations/Fade";
+import { motion } from "motion/react";
+
+const viewport = { once: true, amount: 0.3 };
 
 export default function OurPillars() {
   return (
     <div className="bg-shpe-white-100 relative flex w-full flex-col items-center py-10 md:pb-30">
-      <h2 className="text-shpe-blue-200 font-shpe-beachwood mb-10 scale-y-120 text-center text-5xl font-semibold uppercase">
+      <motion.h2
+        variants={FadeIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="text-shpe-blue-200 font-shpe-beachwood mb-10 scale-y-120 text-center text-5xl font-semibold uppercase"
+      >
         OUR PILLARS
-      </h2>
+      </motion.h2>
 
       <div className="relative z-10 flex w-full flex-row flex-wrap justify-center gap-10 px-4">
         {PILLARS.map(({ title, color, image, content }, index) => (
@@ -43,21 +55,46 @@ export default function OurPillars() {
           />
         ))}
       </div>
-      <Image
-        src={gearIcon}
-        alt="gear icon"
-        className="absolute top-5 left-3 hidden w-50 -rotate-6 md:block"
-      />
-      <Image
-        src={gearIcon}
-        alt="gear icon"
-        className="absolute right-3 bottom-5 hidden w-45 -rotate-6 md:block"
-      />
-      <Image
-        src={wrenchIcon}
-        alt="wrench icon"
-        className="absolute top-5 right-3 hidden w-45 rotate-89 md:block"
-      />
+      <motion.div
+        variants={FloatRight}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="absolute top-5 left-3"
+      >
+        <Image
+          src={gearIcon}
+          alt="gear icon"
+          className="hidden w-50 -rotate-6 md:block"
+        />
+      </motion.div>
+
+      <motion.div
+        variants={FloatLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="absolute right-3 bottom-5"
+      >
+        <Image
+          src={gearIcon}
+          alt="gear icon"
+          className="hidden w-45 -rotate-6 md:block"
+        />
+      </motion.div>
+      <motion.div
+        variants={FloatLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="absolute top-5 right-3"
+      >
+        <Image
+          src={wrenchIcon}
+          alt="wrench icon"
+          className="hidden w-45 rotate-89 md:block"
+        />
+      </motion.div>
     </div>
   );
 }
