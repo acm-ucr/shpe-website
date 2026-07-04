@@ -1,3 +1,4 @@
+"use client";
 import instagramIcon from "@/public/footer/instagram.webp";
 import emailIcon from "@/public/icons/email2.webp";
 import discordIcon from "@/public/footer/discord.webp";
@@ -8,8 +9,11 @@ import gearImage from "@/public/icons/gear.webp";
 import SocialLinks from "@/data/socialData";
 
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
+import { FloatUp } from "@/animations/Float";
+import { RotateClockwise, RotateCounterClockwise } from "@/animations/Rotate";
+import { motion } from "motion/react";
 
 // made these into variables for easier changes if needed/wanted
 const subHeaderStyle =
@@ -25,6 +29,9 @@ type ContactCircleProps = {
   textSize?: string;
   tweak?: string;
 };
+
+const viewport = { once: true, amount: 0.3 };
+
 const ContactCircle = ({
   icon,
   alt,
@@ -112,22 +119,44 @@ const ContactUs = () => {
   return (
     <div className="bg-shpe-white-100 relative overflow-hidden py-10">
       {/* Gears */}
-      <Image
-        src={gearImage}
-        alt="gear"
-        className="absolute top-[50px] left-[-100px] hidden w-[300px] scale-x-[-1] opacity-70 lg:block"
-      />
-      <Image
-        src={gearImage}
-        alt="gear"
-        className="absolute top-[50px] right-[-100px] hidden w-[300px] opacity-70 lg:block"
-      />
+      <motion.div
+        className="absolute top-[50px] left-[-100px]"
+        viewport={viewport}
+        variants={RotateClockwise}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+          src={gearImage}
+          alt="gear"
+          className="hidden w-[300px] scale-x-[-1] opacity-70 lg:block"
+        />
+      </motion.div>
+      <motion.div
+        className="absolute top-[50px] right-[-100px]"
+        viewport={viewport}
+        variants={RotateCounterClockwise}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+          src={gearImage}
+          alt="gear"
+          className="hidden w-[300px] opacity-70 lg:block"
+        />
+      </motion.div>
       {/* Title */}
       <div className="font-shpe-beachwood text-center text-6xl font-semibold">
         CONTACT US
       </div>
       {/* Content */}
-      <div className={margins}>
+      <motion.div
+        variants={FloatUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className={margins}
+      >
         <div className={subHeaderStyle}>Have Questions?</div>
         <div className="mt-[25px] flex items-center justify-center">
           {contactQuestions.map((item, i) => (
@@ -137,8 +166,15 @@ const ContactUs = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={margins}>
+      </motion.div>
+      <motion.div
+        variants={FloatUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        transition={{ duration: 0.25, delay: 0.1 }}
+        className={margins}
+      >
         <div className={subHeaderStyle}>Connect With Us!</div>
         <div className="mt-[25px] flex flex-col items-center gap-[20px] lg:flex-row">
           {/* row 1 */}
@@ -157,7 +193,7 @@ const ContactUs = () => {
             <ContactCircle {...socialLinks[3]} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
