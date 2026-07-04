@@ -6,6 +6,8 @@ import newsIcon from "@/public/footer/news.webp";
 import linkedinIcon from "@/public/footer/linkedIn.webp";
 import facebookIcon from "@/public/footer/facebook.webp";
 import gearImage from "@/public/icons/gear.webp";
+import SocialLinks from "@/data/socialData";
+
 import Image from "next/image";
 import Link from "next/link";
 import { StaticImageData } from "next/image";
@@ -72,7 +74,7 @@ const contactQuestions = [
     icon: instagramIcon,
     alt: "Instagram",
     label: "@shpeucr",
-    href: "https://www.instagram.com/shpeucr/",
+    href: SocialLinks.instagram,
     textSize: "md:text-[15px] text-[8px]",
     tweak: "md:-mt-[5px] pb-[10px] -mt-[2px]",
   },
@@ -80,7 +82,7 @@ const contactQuestions = [
     icon: emailIcon,
     alt: "Email",
     label: "shpeucr@gmail.com",
-    href: "mailto:shpeucr@gmail.com",
+    href: SocialLinks.email,
     textSize: "md:text-[12px] text-[7px]",
     tweak: "md:-mt-[15px] pb-[12px] -mt-[7px]",
   },
@@ -91,20 +93,25 @@ const socialLinks = [
     icon: discordIcon,
     alt: "Discord",
     label: "Discord",
-    href: "https://discord.com/invite/AbUrTPBja6",
+    href: SocialLinks.discord,
   },
-  { icon: newsIcon, alt: "Newsletter", label: "Newsletter", href: "/" },
+  {
+    icon: newsIcon,
+    alt: "Newsletter",
+    label: "Newsletter",
+    href: SocialLinks.newsletter,
+  },
   {
     icon: linkedinIcon,
     alt: "LinkedIn",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/shpe-at-ucr/",
+    href: SocialLinks.linkedin,
   },
   {
     icon: facebookIcon,
     alt: "Facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/groups/shpeucr/",
+    href: SocialLinks.facebook,
   },
 ];
 
