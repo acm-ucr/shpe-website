@@ -10,26 +10,22 @@ import {
 interface PopupProps {
   clickableComponent: ReactNode;
   popupComponent: ReactNode;
-  overlayColor?: string;
   position?: string;
 }
 
 const Popup = ({
   clickableComponent,
   popupComponent,
-  overlayColor,
   position,
 }: PopupProps) => {
   return (
     <Dialog>
-      <DialogTrigger className="relative w-fit cursor-pointer" asChild>
+      <DialogTrigger className="relative cursor-pointer" asChild>
         {clickableComponent}
       </DialogTrigger>
-      <DialogOverlay
-        className={`${overlayColor === undefined ? "bg-white/0" : overlayColor}`}
-      >
+      <DialogOverlay className="bg-shpe-blue-200/40">
         <DialogContent
-          className={`${position === undefined ? "fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" : position}`}
+          className={`${position === undefined ? "fixed top-[50%] left-[50%] w-full translate-x-[-50%] translate-y-[-50%] md:w-fit" : position}`}
         >
           <DialogTitle />
           {popupComponent}

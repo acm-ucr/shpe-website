@@ -22,7 +22,7 @@ const AlumniCard = ({ name, year, linkedIn }: AlumniCardProps) => {
         {year}
       </span>
       <div className="not-[]:p-1 mt-2 flex items-center justify-center rounded-md">
-        <Image src={LinkedInLogo} alt="LinkedIn" width={20} height={20} />
+        <Image src={LinkedInLogo} alt="LinkedIn" width={35} height={35} />
       </div>
     </a>
   );

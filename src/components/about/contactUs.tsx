@@ -1,3 +1,4 @@
+"use client";
 import instagramIcon from "@/public/footer/instagram.webp";
 import emailIcon from "@/public/icons/email2.webp";
 import discordIcon from "@/public/footer/discord.webp";
@@ -5,16 +6,16 @@ import newsIcon from "@/public/footer/news.webp";
 import linkedinIcon from "@/public/footer/linkedIn.webp";
 import facebookIcon from "@/public/footer/facebook.webp";
 import gearImage from "@/public/icons/gear.webp";
+import SocialLinks from "@/data/socialData";
 
 import Image from "next/image";
-import { StaticImageData } from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
+import { FloatUp } from "@/animations/Float";
+import { RotateClockwise, RotateCounterClockwise } from "@/animations/Rotate";
+import { motion } from "motion/react";
 
 // made these into variables for easier changes if needed/wanted
-const iconSize = "md:h-[88px] md:w-[88px] h-[51px] w-[51px]";
-const circleStyle =
-  "flex flex-col items-center justify-center bg-shpe-orange-500 rounded-full w-[82px] h-[82px] md:h-[140px] md:w-[140px]";
-const lineStyle = "h-[3px] w-[45px] bg-shpe-orange-500 mx-[20px] md:w-[82px]";
 const subHeaderStyle =
   "font-shpe-univers-condensed text-shpe-blue-200 text-center text-3xl";
 const margins = "flex flex-col items-center gap-[20px] mt-[40px]";
@@ -28,6 +29,9 @@ type ContactCircleProps = {
   textSize?: string;
   tweak?: string;
 };
+
+const viewport = { once: true, amount: 0.3 };
+
 const ContactCircle = ({
   icon,
   alt,
@@ -43,9 +47,14 @@ const ContactCircle = ({
         ? "_blank"
         : undefined
     }
+    className="transition-transform hover:scale-110"
   >
-    <div className={circleStyle}>
-      <Image src={icon} alt={alt} className={`${iconSize}`} />
+    <div className="bg-shpe-orange-500 flex h-[82px] w-[82px] flex-col items-center justify-center rounded-full md:h-[140px] md:w-[140px]">
+      <Image
+        src={icon}
+        alt={alt}
+        className="h-[51px] w-[51px] md:h-[88px] md:w-[88px]"
+      />
       <div
         className={`text-center ${textSize} leading-none text-white ${tweak}`}
       >
@@ -55,7 +64,9 @@ const ContactCircle = ({
   </Link>
 );
 
-const Divider = () => <div className={lineStyle} />;
+const Divider = () => (
+  <div className="bg-shpe-orange-500 mx-[20px] h-[3px] w-[45px] md:w-[82px]" />
+);
 
 // data for reusable components
 const contactQuestions = [
@@ -63,7 +74,7 @@ const contactQuestions = [
     icon: instagramIcon,
     alt: "Instagram",
     label: "@shpeucr",
-    href: "https://www.instagram.com/shpeucr/",
+    href: SocialLinks.instagram,
     textSize: "md:text-[15px] text-[8px]",
     tweak: "md:-mt-[5px] pb-[10px] -mt-[2px]",
   },
@@ -71,7 +82,7 @@ const contactQuestions = [
     icon: emailIcon,
     alt: "Email",
     label: "shpeucr@gmail.com",
-    href: "mailto:shpeucr@gmail.com",
+    href: SocialLinks.email,
     textSize: "md:text-[12px] text-[7px]",
     tweak: "md:-mt-[15px] pb-[12px] -mt-[7px]",
   },
@@ -82,43 +93,70 @@ const socialLinks = [
     icon: discordIcon,
     alt: "Discord",
     label: "Discord",
-    href: "https://discord.com/invite/AbUrTPBja6",
+    href: SocialLinks.discord,
   },
-  { icon: newsIcon, alt: "Newsletter", label: "Newsletter", href: "/" },
+  {
+    icon: newsIcon,
+    alt: "Newsletter",
+    label: "Newsletter",
+    href: SocialLinks.newsletter,
+  },
   {
     icon: linkedinIcon,
     alt: "LinkedIn",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/shpe-at-ucr/",
+    href: SocialLinks.linkedin,
   },
   {
     icon: facebookIcon,
     alt: "Facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/groups/shpeucr/",
+    href: SocialLinks.facebook,
   },
 ];
 
 const ContactUs = () => {
   return (
-    <div className="bg-shpe-white-100 relative overflow-hidden py-[40px] md:py-[240px]">
+    <div className="bg-shpe-white-100 relative overflow-hidden py-10">
       {/* Gears */}
-      <Image
-        src={gearImage}
-        alt="gear"
-        className="absolute top-[50px] left-[-100px] hidden w-[300px] scale-x-[-1] opacity-70 lg:block"
-      />
-      <Image
-        src={gearImage}
-        alt="gear"
-        className="absolute top-[50px] right-[-100px] hidden w-[300px] opacity-70 lg:block"
-      />
+      <motion.div
+        className="absolute top-[50px] left-[-100px]"
+        viewport={viewport}
+        variants={RotateClockwise}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+          src={gearImage}
+          alt="gear"
+          className="hidden w-[300px] scale-x-[-1] opacity-70 lg:block"
+        />
+      </motion.div>
+      <motion.div
+        className="absolute top-[50px] right-[-100px]"
+        viewport={viewport}
+        variants={RotateCounterClockwise}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <Image
+          src={gearImage}
+          alt="gear"
+          className="hidden w-[300px] opacity-70 lg:block"
+        />
+      </motion.div>
       {/* Title */}
       <div className="font-shpe-beachwood text-center text-6xl font-semibold">
         CONTACT US
       </div>
       {/* Content */}
-      <div className={margins}>
+      <motion.div
+        variants={FloatUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className={margins}
+      >
         <div className={subHeaderStyle}>Have Questions?</div>
         <div className="mt-[25px] flex items-center justify-center">
           {contactQuestions.map((item, i) => (
@@ -128,8 +166,15 @@ const ContactUs = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={margins}>
+      </motion.div>
+      <motion.div
+        variants={FloatUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        transition={{ duration: 0.25, delay: 0.1 }}
+        className={margins}
+      >
         <div className={subHeaderStyle}>Connect With Us!</div>
         <div className="mt-[25px] flex flex-col items-center gap-[20px] lg:flex-row">
           {/* row 1 */}
@@ -148,7 +193,7 @@ const ContactUs = () => {
             <ContactCircle {...socialLinks[3]} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

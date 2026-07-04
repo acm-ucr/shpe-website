@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
 import Checklist from "@/public/Checklist.webp";
 import Cursor from "@/public/icons/Cursor.webp";
-import SBConstruction from "@/public/SBConstruction.webp";
+import SBConstruction from "@/public/home/RecentEvents/SBConstruction.webp";
 import SBQRCode from "@/public/SBQRCode.webp";
 import Gear from "@/public/icons/gear.webp";
+
+import { motion } from "motion/react";
+import { DropUp } from "@/animations/Drop";
+import { FloatUp, FloatLeft, FloatRight } from "@/animations/Float";
+
+const viewport = { once: true, amount: 0.4 };
 
 const Joining = () => {
   return (
@@ -35,7 +42,13 @@ const Joining = () => {
         Interested In Joining?
       </p>
       <div className="hidden w-full md:flex md:items-start md:justify-center md:gap-10">
-        <div className="flex flex-col items-center">
+        <motion.div
+          viewport={viewport}
+          variants={FloatUp}
+          initial="hidden"
+          whileInView="visible"
+          className="flex flex-col items-center"
+        >
           <Image
             src={SBConstruction}
             alt="Construction"
@@ -44,8 +57,14 @@ const Joining = () => {
           <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 mb-5 w-95 scale-y-125 text-center text-2xl font-medium">
             Join us at our next Solar Boat General Meeting!
           </p>
-        </div>
-        <div className="ml-10 flex flex-col items-center">
+        </motion.div>
+        <motion.div
+          viewport={viewport}
+          variants={FloatUp}
+          initial="hidden"
+          whileInView="visible"
+          className="ml-10 flex flex-col items-center"
+        >
           <Image
             src={SBQRCode}
             alt="QR Code"
@@ -55,29 +74,44 @@ const Joining = () => {
             <p className="font-shpe-beachwood text-shpe-blue-200 mt-2 w-95 scale-y-125 text-center text-2xl font-medium">
               Fill out the interest form here to get started.
             </p>
-            <Image
-              src={Cursor}
-              alt="Cursor"
-              className="-mt-5 -ml-55 h-auto w-25"
-            />
+            <motion.div
+              viewport={viewport}
+              variants={DropUp}
+              initial="hidden"
+              whileInView="visible"
+              className="-mt-5 -ml-55"
+            >
+              <Image src={Cursor} alt="Cursor" className="h-auto w-25" />
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex flex-col items-center md:hidden">
-        <Image
-          src={SBConstruction}
-          alt="Construction"
-          className="z-10 mb-6 h-auto w-4/5"
-        />
+        <motion.div
+          variants={FloatRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="z-10 mb-6 w-4/5"
+        >
+          <Image
+            src={SBConstruction}
+            alt="Construction"
+            className="h-auto w-full"
+          />
+        </motion.div>
         <p className="font-shpe-beachwood text-shpe-blue-200 scale-y-125 text-center text-lg font-medium">
           Join us at our next Solar Boat General Meeting!
         </p>
-        <Image
-          src={Checklist}
-          alt="Checklist"
-          className="z-10 mb-5 h-auto w-4/5"
-        />
+        <motion.div
+          variants={FloatLeft}
+          initial="hidden"
+          whileInView="visible"
+          className="z-10 mb-5 w-4/5"
+        >
+          <Image src={Checklist} alt="Checklist" className="h-auto w-full" />
+        </motion.div>
         <div className="flex flex-row items-center">
           <Image
             src={Cursor}

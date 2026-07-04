@@ -3,11 +3,17 @@ import { alumni } from "@/data/alumniData";
 import GradCap from "@/public/icons/Graduation Cap.webp";
 import TitleBanner from "@/components/Title";
 
+export const metadata = {
+  title: "Alumni | SHPE @ UCR",
+  description:
+    "Meet the alumni of the Society of Hispanic Professional Engineers at UC Riverside. Explore a growing network of successful STEM and tech professionals.",
+};
+
 const AlumniPage = () => {
   return (
     <div className="flex flex-col justify-center">
       <TitleBanner title="ALUMNI" icon={GradCap} />
-      <div className="relative grid grid-cols-3 gap-10 px-30 pt-10">
+      <div className="relative grid gap-10 px-10 pt-10 lg:grid-cols-3 lg:px-30">
         {alumni.map(({ name, year, linkedIn }) => (
           <AlumniCard
             key={linkedIn}

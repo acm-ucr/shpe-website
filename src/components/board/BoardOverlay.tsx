@@ -20,14 +20,14 @@ const BoardOverlay = ({
   quote,
 }: BoardOverlayProps) => {
   return (
-    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-160 flex-row gap-6 rounded-4xl border-2 p-6">
+    <div className="bg-shpe-blue-200 text-shpe-white-100 flex w-full flex-col items-center rounded-4xl border-2 p-6 md:w-160 md:flex-row md:gap-6">
       {/* Left Section */}
-      <div className="flex w-72 flex-col justify-center text-left">
-        <div className="font-shpe-univers-condensed mb-2 text-center text-lg">
+      <div className="flex flex-col justify-center text-left md:w-72">
+        <div className="font-shpe-univers-condensed text-center text-2xl md:mb-2 md:text-lg">
           {position}
         </div>
 
-        <div className="bg-shpe-white-100 relative aspect-[5/6] w-full overflow-hidden rounded-3xl">
+        <div className="bg-shpe-white-100 relative hidden aspect-[5/6] w-full overflow-hidden rounded-3xl md:block">
           <Image src={image} alt={name} fill className="object-cover" />
         </div>
 
@@ -37,10 +37,14 @@ const BoardOverlay = ({
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-1 flex-col pt-12">
-        <div className="font-shpe-univers-condensed text-3xl">{title}</div>
+      <div className="flex flex-col md:flex-1 md:pt-12">
+        <div className="font-shpe-univers-condensed text-center text-2xl md:text-left md:text-3xl">
+          {title}
+        </div>
 
-        <div className="mt-5 text-lg italic opacity-80">"{quote}"</div>
+        <div className="text-md text-center italic opacity-80 md:mt-5 md:text-left md:text-lg">
+          "{quote}"
+        </div>
         <Link
           href={linkedin}
           target="_blank"
