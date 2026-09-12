@@ -1,6 +1,7 @@
 import CalenderIcon from "@/public/icons/Calendar.webp";
 import TitleBanner from "@/components/Title";
 import EventsList from "@/components/ui/eventsList";
+import CalendarComponent from "@/components/calendar/calendar";
 import UpcomingEventsData from "@/data/upcomingEventsData";
 
 export const metadata = {
@@ -14,6 +15,7 @@ const Calendar = () => {
     <div>
       <TitleBanner title="CALENDAR" icon={CalenderIcon} decoration="gears" />
       <EventsList title="Upcoming Events" eventsData={UpcomingEventsData} />
+      <CalendarComponent />
     </div>
   );
 };
